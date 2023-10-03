@@ -46,44 +46,63 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaoCao.cs">
+    <Compile Include="DAO\Connect.cs" />
+    <Compile Include="View\BaoCao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaoCao.Designer.cs">
+    <Compile Include="View\BaoCao.Designer.cs">
       <DependentUpon>BaoCao.cs</DependentUpon>
     </Compile>
-    <Compile Include="DangKy.cs">
+    <Compile Include="View\DangKy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DangKy.Designer.cs">
+    <Compile Include="View\DangKy.Designer.cs">
       <DependentUpon>DangKy.cs</DependentUpon>
     </Compile>
-    <Compile Include="DangNhap.cs">
+    <Compile Include="View\DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DangNhap.Designer.cs">
+    <Compile Include="View\DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLNCC.cs">
+    <Compile Include="View\QLBH.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QLNCC.Designer.cs">
+    <Compile Include="View\QLBH.Designer.cs">
+      <DependentUpon>QLBH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QLKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QLKho.Designer.cs">
+      <DependentUpon>QLKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QLNCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\QLNCC.Designer.cs">
       <DependentUpon>QLNCC.cs</DependentUpon>
     </Compile>
-    <Compile Include="QLNV.cs">
+    <Compile Include="View\QLNV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QLNV.Designer.cs">
+    <Compile Include="View\QLNV.Designer.cs">
       <DependentUpon>QLNV.cs</DependentUpon>
     </Compile>
-    <Compile Include="TrangChu.cs">
+    <Compile Include="View\TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TrangChu.Designer.cs">
+    <Compile Include="View\TrangChu.Designer.cs">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\DangKy.resx">
+      <DependentUpon>DangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -93,7 +112,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="TrangChu.resx">
+    <EmbeddedResource Include="View\QLNCC.resx">
+      <DependentUpon>QLNCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -108,6 +130,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
