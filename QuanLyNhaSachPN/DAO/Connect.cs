@@ -28,19 +28,22 @@ namespace QuanLyNhaSachPN.DAO
             catch { }
             return ds;
         }
-
-        public bool ThucThi(string truyvan)
+        public bool ThucThi(string query)
         {
             try
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand();
+                SqlCommand cmd = new SqlCommand(query, conn);
                 int r = cmd.ExecuteNonQuery();
                 conn.Close();
                 return r > 0;
             }
-            catch { }
+            catch (SqlException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
             return false;
+
         }
     }
 }

@@ -50,35 +50,36 @@ namespace QuanLyNhaSachPN
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(500, 50);
+            this.pictureBox1.Location = new System.Drawing.Point(450, 20);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(305, 306);
+            this.pictureBox1.Size = new System.Drawing.Size(400, 400);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(570, 380);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(575, 439);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(188, 25);
+            this.label4.Size = new System.Drawing.Size(183, 28);
             this.label4.TabIndex = 8;
             this.label4.Text = "Uy Tín và Tiện Lợi";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(149, 31);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 25);
+            this.label3.Size = new System.Drawing.Size(134, 28);
             this.label3.TabIndex = 13;
             this.label3.Text = "ĐĂNG NHẬP";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtTaiKhoan);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(37, 74);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(340, 70);
@@ -90,7 +91,7 @@ namespace QuanLyNhaSachPN
             // 
             this.txtTaiKhoan.Location = new System.Drawing.Point(27, 30);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(280, 22);
+            this.txtTaiKhoan.Size = new System.Drawing.Size(280, 30);
             this.txtTaiKhoan.TabIndex = 0;
             // 
             // groupBox1
@@ -101,7 +102,7 @@ namespace QuanLyNhaSachPN
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 19);
+            this.groupBox1.Location = new System.Drawing.Point(13, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(431, 477);
             this.groupBox1.TabIndex = 14;
@@ -110,15 +111,16 @@ namespace QuanLyNhaSachPN
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(49, 326);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(184, 20);
+            this.label5.Size = new System.Drawing.Size(188, 23);
             this.label5.TabIndex = 18;
             this.label5.Text = "Bạn chưa có tài khoản?";
             // 
             // btnDangKy
             // 
+            this.btnDangKy.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKy.Location = new System.Drawing.Point(37, 361);
             this.btnDangKy.Name = "btnDangKy";
             this.btnDangKy.Size = new System.Drawing.Size(340, 49);
@@ -129,6 +131,7 @@ namespace QuanLyNhaSachPN
             // 
             // btnDangNhap
             // 
+            this.btnDangNhap.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.Location = new System.Drawing.Point(37, 256);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(340, 49);
@@ -140,6 +143,7 @@ namespace QuanLyNhaSachPN
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.txtMatKhau);
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(37, 161);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(340, 70);
@@ -152,17 +156,18 @@ namespace QuanLyNhaSachPN
             this.txtMatKhau.Location = new System.Drawing.Point(27, 30);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
-            this.txtMatKhau.Size = new System.Drawing.Size(280, 22);
+            this.txtMatKhau.Size = new System.Drawing.Size(280, 30);
             this.txtMatKhau.TabIndex = 1;
             // 
             // DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(862, 553);
+            this.ClientSize = new System.Drawing.Size(862, 573);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "DangNhap";
             this.Text = "DangNhap";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

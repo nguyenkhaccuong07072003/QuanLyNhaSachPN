@@ -22,17 +22,36 @@ namespace QuanLyNhaSachPN
             string query = string.Format("select * from NguoiDung where taikhoan = '{0}' and matkhau = '{1}'"
                 , txtTaiKhoan.Text, txtMatKhau.Text);
             DataSet ds = con.LayDuLieu(query);
-            if (ds.Tables[0].Rows.Count == 1)
+            if(txtTaiKhoan.Text == "" && txtMatKhau.Text =="")
             {
-                MessageBox.Show("Đăng nhập thành công");
-                TrangChu frm = new TrangChu();
-                frm.Show();
-                this.Hide();
+                MessageBox.Show("Vui lòng nhập tài khoản và mật khẩu!");
             }
             else
             {
-                MessageBox.Show("Đăng nhập thất bại");
+                if (txtTaiKhoan.Text == "")
+                {
+                    MessageBox.Show("Chưa nhập tài khoản!");
+                }
+                else if (txtMatKhau.Text == "")
+                {
+                    MessageBox.Show("Chưa nhập mật khẩu!");
+                }
+                else
+                {
+                    if (ds.Tables[0].Rows.Count == 1)
+                    {
+                        MessageBox.Show("Đăng nhập thành công");
+                        TrangChu frm = new TrangChu();
+                        frm.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Đăng nhập thất bại");
+                    }
+                }
             }
+
         }
 
         private void btnDangKy_Click(object sender, EventArgs e)
