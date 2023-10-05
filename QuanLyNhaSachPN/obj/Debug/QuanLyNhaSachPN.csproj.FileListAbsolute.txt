@@ -11,3 +11,4 @@ D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.exe
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.pdb
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.DangKy.resources
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.QLNCC.resources
+D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.QLKho.resources

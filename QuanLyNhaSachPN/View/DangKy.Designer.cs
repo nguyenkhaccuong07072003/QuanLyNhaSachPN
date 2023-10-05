@@ -36,7 +36,6 @@ namespace QuanLyNhaSachPN
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.rbtnNhanVien = new System.Windows.Forms.RadioButton();
-            this.rbtnQuanLy = new System.Windows.Forms.RadioButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtNhapLaiMatKhau = new System.Windows.Forms.TextBox();
             this.btnDangKy = new System.Windows.Forms.Button();
@@ -46,6 +45,7 @@ namespace QuanLyNhaSachPN
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtTaiKhoan = new System.Windows.Forms.TextBox();
+            this.rbtnQuanLy = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -102,8 +102,8 @@ namespace QuanLyNhaSachPN
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.rbtnNhanVien);
             this.groupBox5.Controls.Add(this.rbtnQuanLy);
+            this.groupBox5.Controls.Add(this.rbtnNhanVien);
             this.groupBox5.Location = new System.Drawing.Point(37, 270);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(340, 75);
@@ -118,20 +118,8 @@ namespace QuanLyNhaSachPN
             this.rbtnNhanVien.Name = "rbtnNhanVien";
             this.rbtnNhanVien.Size = new System.Drawing.Size(112, 27);
             this.rbtnNhanVien.TabIndex = 4;
-            this.rbtnNhanVien.Text = "Nhân Viên";
+            this.rbtnNhanVien.Text = "Nhan Vien";
             this.rbtnNhanVien.UseVisualStyleBackColor = true;
-            // 
-            // rbtnQuanLy
-            // 
-            this.rbtnQuanLy.AutoSize = true;
-            this.rbtnQuanLy.Checked = true;
-            this.rbtnQuanLy.Location = new System.Drawing.Point(27, 31);
-            this.rbtnQuanLy.Name = "rbtnQuanLy";
-            this.rbtnQuanLy.Size = new System.Drawing.Size(93, 27);
-            this.rbtnQuanLy.TabIndex = 3;
-            this.rbtnQuanLy.TabStop = true;
-            this.rbtnQuanLy.Text = "Quản Lý";
-            this.rbtnQuanLy.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
@@ -215,6 +203,18 @@ namespace QuanLyNhaSachPN
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(280, 30);
             this.txtTaiKhoan.TabIndex = 0;
+            // 
+            // rbtnQuanLy
+            // 
+            this.rbtnQuanLy.AutoSize = true;
+            this.rbtnQuanLy.Checked = true;
+            this.rbtnQuanLy.Location = new System.Drawing.Point(27, 31);
+            this.rbtnQuanLy.Name = "rbtnQuanLy";
+            this.rbtnQuanLy.Size = new System.Drawing.Size(93, 27);
+            this.rbtnQuanLy.TabIndex = 3;
+            this.rbtnQuanLy.TabStop = true;
+            this.rbtnQuanLy.Text = "Quan Ly";
+            this.rbtnQuanLy.UseVisualStyleBackColor = true;
             // 
             // DangKy
             // 

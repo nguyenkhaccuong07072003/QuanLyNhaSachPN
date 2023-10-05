@@ -36,6 +36,7 @@ namespace QuanLyNhaSachPN
             {
                 chucDanh = rbtnQuanLy.Text;
             }
+            
             string checkTK = string.Format("select * from NguoiDung where taikhoan = '{0}'"
                 , txtTaiKhoan.Text);
             DataSet ds = con.LayDuLieu(checkTK);

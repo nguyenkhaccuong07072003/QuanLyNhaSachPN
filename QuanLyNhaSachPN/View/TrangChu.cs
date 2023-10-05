@@ -1,4 +1,5 @@
-﻿using QuanLyNhaSachPN.View;
+﻿using QuanLyNhaSachPN.DAO;
+using QuanLyNhaSachPN.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +18,7 @@ namespace QuanLyNhaSachPN
         {
             InitializeComponent();
         }
-
+        Connect con = new Connect();
         private void btnQLNV_Click(object sender, EventArgs e)
         {
             QLNV frm = new QLNV();
@@ -98,6 +99,27 @@ namespace QuanLyNhaSachPN
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private string CheckQH()
+        {
+            //Lấy tên tài khoản từ login
+            string tk = DangNhap.Taikhoan;
+
+            //Kiểm tra chức danh của tài khoản
+            string sql = string.Format("select CHUCDANH from NGUOIDUNG where TAIKHOAN = '{0}'", tk);
+            DataSet ds = con.LayDuLieu(sql);
+
+            //Trả về kết quả chức danh
+            return ds.Tables[0].Rows[0]["CHUCDANH"].ToString();
+        }
+        private void TrangChu_Load(object sender, EventArgs e)
+        {
+            if(CheckQH() == "Nhan Vien")
+            {
+                btnQLNCC.Enabled = false;
+                btnQLNV.Enabled = false;
+                btnThongKe.Enabled = false;
+            }    
         }
     }
 }

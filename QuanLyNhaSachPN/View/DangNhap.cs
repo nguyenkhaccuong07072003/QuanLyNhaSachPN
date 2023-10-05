@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,9 +17,11 @@ namespace QuanLyNhaSachPN
         {
             InitializeComponent();
         }
+        public static string Taikhoan;
         Connect con = new Connect();
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
+            Taikhoan = txtTaiKhoan.Text;
             string query = string.Format("select * from NguoiDung where taikhoan = '{0}' and matkhau = '{1}'"
                 , txtTaiKhoan.Text, txtMatKhau.Text);
             DataSet ds = con.LayDuLieu(query);
