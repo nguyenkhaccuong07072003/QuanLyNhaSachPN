@@ -109,7 +109,7 @@ namespace QuanLyNhaSachPN
             string sql = string.Format("select CHUCDANH from NGUOIDUNG where TAIKHOAN = '{0}'", tk);
             DataSet ds = con.LayDuLieu(sql);
 
-            //Trả về kết quả chức danh
+            //Trả về kết quả của hàm Check quyền hạn
             return ds.Tables[0].Rows[0]["CHUCDANH"].ToString();
         }
         private void TrangChu_Load(object sender, EventArgs e)
