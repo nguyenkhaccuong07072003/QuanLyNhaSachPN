@@ -119,6 +119,9 @@ namespace QuanLyNhaSachPN
                 btnQLNCC.Enabled = false;
                 btnQLNV.Enabled = false;
                 btnThongKe.Enabled = false;
+                quảnLýNhàCungCấpToolStripMenuItem.Enabled = false;
+                quảnLýNhânViênToolStripMenuItem.Enabled = false;
+                thốngKêToolStripMenuItem.Enabled = false;
             }    
         }
     }
