@@ -11,4 +11,12 @@ D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.exe
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.pdb
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.DangKy.resources
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.QLNCC.resources
-D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.QLKho.resources
+D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.QLNV.resources
+D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.QLCTHD.resources
+D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.QLHang.resources
+D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.QLHD.resources
+D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.CTPN.resources
+D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.CTPX.resources
+D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.PhieuNhap.resources
+D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.PhieuXuat.resources
+D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.QLK.resources

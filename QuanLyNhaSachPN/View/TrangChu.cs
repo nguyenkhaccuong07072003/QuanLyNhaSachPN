@@ -19,87 +19,6 @@ namespace QuanLyNhaSachPN
             InitializeComponent();
         }
         Connect con = new Connect();
-        private void btnQLNV_Click(object sender, EventArgs e)
-        {
-            QLNV frm = new QLNV();
-            frm.Show();
-            this.Hide();
-        }
-
-        private void btnQLBH_Click(object sender, EventArgs e)
-        {
-            QLBH frm = new QLBH();
-            frm.Show();
-            this.Hide();
-        }
-
-        private void btnQLK_Click(object sender, EventArgs e)
-        {
-            QLKho frm = new QLKho();
-            frm.Show();
-            this.Hide();
-        }
-
-        private void btnQLNCC_Click(object sender, EventArgs e)
-        {
-            QLNCC frm = new QLNCC();
-            frm.Show();
-            this.Hide();
-        }
-
-        private void btnThongKe_Click(object sender, EventArgs e)
-        {
-            BaoCao frm = new BaoCao();
-            frm.Show();
-            this.Hide();
-        }
-
-        private void quảnLýNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            QLNV frm = new QLNV();
-            frm.Show();
-            this.Hide();
-        }
-
-        private void quảnLýBánHàngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            QLBH frm = new QLBH();
-            frm.Show();
-            this.Hide();
-        }
-
-        private void quảnLýKhoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            QLKho frm = new QLKho();
-            frm.Show();
-            this.Hide();
-        }
-
-        private void quảnLýNhàCungCấpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            QLNCC frm = new QLNCC();
-            frm.Show();
-            this.Hide();
-        }
-
-        private void thốngKêToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            BaoCao frm = new BaoCao();
-            frm.Show();
-            this.Hide();
-        }
-
-        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            DangNhap frm = new DangNhap();
-            frm.Show();
-            this.Hide();
-        }
-
-        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
         private string CheckQH()
         {
             //Lấy tên tài khoản từ login
@@ -116,13 +35,67 @@ namespace QuanLyNhaSachPN
         {
             if(CheckQH() == "Nhan Vien")
             {
-                btnQLNCC.Enabled = false;
                 btnQLNV.Enabled = false;
+                btnQLNCC.Enabled = false;
                 btnThongKe.Enabled = false;
-                quảnLýNhàCungCấpToolStripMenuItem.Enabled = false;
-                quảnLýNhânViênToolStripMenuItem.Enabled = false;
-                thốngKêToolStripMenuItem.Enabled = false;
             }    
+        }
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if(activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+        private void btnTrangChu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnQLNV_Click(object sender, EventArgs e)
+        {
+            openChildForm(new QLNV());
+        }
+
+        private void btnQLBH_Click(object sender, EventArgs e)
+        {
+            openChildForm(new QLHD());
+        }
+
+        private void btnQLK_Click(object sender, EventArgs e)
+        {
+            openChildForm(new QLK());
+        }
+
+        private void btnQLNCC_Click(object sender, EventArgs e)
+        {
+            openChildForm(new QLNCC());
+        }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            openChildForm(new BaoCao());
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            DangNhap frm = new DangNhap();
+            frm.Show();
+            this.Close();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

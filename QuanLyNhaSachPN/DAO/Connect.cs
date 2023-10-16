@@ -43,7 +43,8 @@ namespace QuanLyNhaSachPN.DAO
                 Console.WriteLine(ex.Message);
             }
             return false;
-
         }
+       
     }
+
 }

@@ -43,14 +43,14 @@ namespace QuanLyNhaSachPN
                 {
                     if (ds.Tables[0].Rows.Count == 1)
                     {
-                        MessageBox.Show("Đăng nhập thành công");
+                        //MessageBox.Show("Đăng nhập thành công");
                         TrangChu frm = new TrangChu();
                         frm.Show();
                         this.Hide();
                     }
                     else
                     {
-                        MessageBox.Show("Đăng nhập thất bại");
+                        MessageBox.Show("Tài khoản và mật khẩu chưa chính xác");
                     }
                 }
             }
