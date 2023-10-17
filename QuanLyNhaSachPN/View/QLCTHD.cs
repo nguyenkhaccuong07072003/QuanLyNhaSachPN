@@ -58,20 +58,20 @@ namespace QuanLyNhaSachPN.View
             btnXoa.Enabled = false;
 
             cbMahang.SelectedValue = "";
-            txtSoluong.Text = "";
+            nbrSoLuong.Value = 0;
             txtGiatien.Text = "";
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (txtSoluong.Text == "")
+            if (nbrSoLuong.Value == 0)
             {
                 MessageBox.Show("Vui lòng nhập đủ thông tin");
             }
             else
             {
                 string query = string.Format("insert into CHITIETHOADON values(N'{0}',N'{1}',N'{2}',N'{3}')"
-                , maHD, cbMahang.SelectedValue, txtSoluong.Text, txtGiatien.Text);
+                , maHD, cbMahang.SelectedValue, nbrSoLuong.Value, txtGiatien.Text);
                 bool result = con.ThucThi(query);
                 if (result)
                 {
@@ -91,7 +91,7 @@ namespace QuanLyNhaSachPN.View
                 "MAHANG = N'{1}', SOLUONG=N'{2}', GIATIEN = N'{3}' where MAHD=N'{0}' and MAHANG = '{1}'",
                 txtMahd.Text,
                 cbMahang.SelectedValue,
-                txtSoluong.Text,
+                nbrSoLuong.Value,
                 txtGiatien.Text
                 );
 
@@ -173,7 +173,7 @@ namespace QuanLyNhaSachPN.View
 
                 txtMahd.Text = dgvCTHD.Rows[r].Cells["MAHD"].Value.ToString();
                 cbMahang.SelectedValue = dgvCTHD.Rows[r].Cells["MAHANG"].Value.ToString();
-                txtSoluong.Text = dgvCTHD.Rows[r].Cells["SOLUONG"].Value.ToString();
+                nbrSoLuong.Value = (Decimal) dgvCTHD.Rows[r].Cells["SOLUONG"].Value;
                 txtGiatien.Text = dgvCTHD.Rows[r].Cells["GIATIEN"].Value.ToString();
                 showPrice();
             }
@@ -181,7 +181,7 @@ namespace QuanLyNhaSachPN.View
     
         private void showPrice()
         {
-            Soluong = Convert.ToInt32(txtSoluong.Text);
+            Soluong = Convert.ToInt32(nbrSoLuong.Value);
             string sql = string.Format("SELECT DONGIA FROM HANG WHERE MAHANG = '{0}'", cbMahang.SelectedValue);
 
             DataSet ds = con.LayDuLieu(sql);
@@ -193,7 +193,7 @@ namespace QuanLyNhaSachPN.View
         }
         private void txtSoluong_TextChanged(object sender, EventArgs e)
         {
-            if(txtSoluong.Text.Length > 0 && (Convert.ToInt32(txtSoluong.Text)%1==0) && (Convert.ToInt32(txtSoluong.Text) > 0) )
+            if(nbrSoLuong.Value > 0)
             {
                 showPrice();
             }

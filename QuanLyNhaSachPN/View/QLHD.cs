@@ -104,7 +104,11 @@ namespace QuanLyNhaSachPN.View
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            string query = string.Format("Delete HOADON where MAHD=N'{0}'", txtMaHD.Text);
+            string query = string.Format("if exists (select count(*) from CHITIETHOADON where MAHD = '{0}' group by MAHD having count(*) > 0) " +
+                " begin " +
+                    "Delete CHITIETHOADON where MAHD = '{0}' " +
+                    "Delete HOADON where MAHD = '{0}' " +
+                " end ",txtMaHD.Text);
             DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa?", "Xác nhận xóa", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {

@@ -46,18 +46,18 @@ namespace QuanLyNhaSachPN.View
             btnXoa.Enabled = false;
 
             cbMaHang.SelectedValue = "";
-            txtSoLuong.Text = "";
+            nbrSoLuong.Text = "";
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (txtSoLuong.Text == "")
+            if (nbrSoLuong.Value <= 0)
             {
                 MessageBox.Show("Vui lòng nhập đủ thông tin");
             }
             else
             {
                 string query = string.Format("insert into CHITIETPHIEUXUAT values(N'{0}',N'{1}',N'{2}')"
-                , maPX, cbMaHang.SelectedValue, txtSoLuong.Text);
+                , maPX, cbMaHang.SelectedValue, nbrSoLuong.Value);
                 bool result = con.ThucThi(query);
                 if (result)
                 {
@@ -74,7 +74,7 @@ namespace QuanLyNhaSachPN.View
         private void btnSua_Click(object sender, EventArgs e)
         {
             string query = string.Format("update CHITIETPHIEUXUAT set MAHANG = N'{1}', SOLUONG=N'{2}' where MAPHIEUXUAT=N'{0}' and MAHANG = '{1}'"
-                , maPX, cbMaHang.SelectedValue,txtSoLuong.Text);
+                , maPX, cbMaHang.SelectedValue,nbrSoLuong.Text);
 
             DataSet ds = con.LayDuLieu(query);
             bool kt = con.ThucThi(query);
@@ -161,7 +161,7 @@ namespace QuanLyNhaSachPN.View
 
                 txtMaPX.Text = dgvCTPX.Rows[r].Cells["MAPHIEUXUAT"].Value.ToString();
                 cbMaHang.SelectedValue = dgvCTPX.Rows[r].Cells["MAHANG"].Value.ToString();
-                txtSoLuong.Text = dgvCTPX.Rows[r].Cells["SOLUONG"].Value.ToString();
+                nbrSoLuong.Text = dgvCTPX.Rows[r].Cells["SOLUONG"].Value.ToString();
             }
         }
     }

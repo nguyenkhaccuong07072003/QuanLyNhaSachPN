@@ -30,9 +30,10 @@ namespace QuanLyNhaSachPN.View
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbMaHang = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtGiaNhap = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.txtMaPN = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,21 +49,21 @@ namespace QuanLyNhaSachPN.View
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvCTPN = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cbMaHang = new System.Windows.Forms.ComboBox();
+            this.nbrSoLuong = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTPN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nbrSoLuong)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.nbrSoLuong);
             this.groupBox1.Controls.Add(this.cbMaHang);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtGiaNhap);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtSoLuong);
             this.groupBox1.Controls.Add(this.txtMaPN);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -73,6 +74,24 @@ namespace QuanLyNhaSachPN.View
             this.groupBox1.Size = new System.Drawing.Size(778, 152);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // cbMaHang
+            // 
+            this.cbMaHang.FormattingEnabled = true;
+            this.cbMaHang.Location = new System.Drawing.Point(193, 108);
+            this.cbMaHang.Name = "cbMaHang";
+            this.cbMaHang.Size = new System.Drawing.Size(178, 31);
+            this.cbMaHang.TabIndex = 11;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(260, 22);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(255, 32);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "CHI TIẾT PHIẾU NHẬP";
             // 
             // txtGiaNhap
             // 
@@ -89,13 +108,6 @@ namespace QuanLyNhaSachPN.View
             this.label5.Size = new System.Drawing.Size(79, 23);
             this.label5.TabIndex = 4;
             this.label5.Text = "Giá nhập";
-            // 
-            // txtSoLuong
-            // 
-            this.txtSoLuong.Location = new System.Drawing.Point(524, 57);
-            this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(203, 30);
-            this.txtSoLuong.TabIndex = 2;
             // 
             // txtMaPN
             // 
@@ -240,23 +252,12 @@ namespace QuanLyNhaSachPN.View
             this.dgvCTPN.TabIndex = 0;
             this.dgvCTPN.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTPN_CellClick);
             // 
-            // label7
+            // nbrSoLuong
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(260, 22);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(255, 32);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "CHI TIẾT PHIẾU NHẬP";
-            // 
-            // cbMaHang
-            // 
-            this.cbMaHang.FormattingEnabled = true;
-            this.cbMaHang.Location = new System.Drawing.Point(193, 108);
-            this.cbMaHang.Name = "cbMaHang";
-            this.cbMaHang.Size = new System.Drawing.Size(178, 31);
-            this.cbMaHang.TabIndex = 11;
+            this.nbrSoLuong.Location = new System.Drawing.Point(520, 50);
+            this.nbrSoLuong.Name = "nbrSoLuong";
+            this.nbrSoLuong.Size = new System.Drawing.Size(209, 30);
+            this.nbrSoLuong.TabIndex = 2;
             // 
             // CTPN
             // 
@@ -277,6 +278,7 @@ namespace QuanLyNhaSachPN.View
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTPN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nbrSoLuong)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -287,7 +289,6 @@ namespace QuanLyNhaSachPN.View
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.TextBox txtMaPN;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -304,5 +305,6 @@ namespace QuanLyNhaSachPN.View
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbMaHang;
+        private System.Windows.Forms.NumericUpDown nbrSoLuong;
     }
 }

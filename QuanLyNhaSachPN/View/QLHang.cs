@@ -34,7 +34,7 @@ namespace QuanLyNhaSachPN.View
             txtMahang.Text = "";
             txtTenhang.Text = "";
             txtDVT.Text = "";
-            txtSoluong.Text = "";
+            nbrSoLuong.Value = 0;
             txtDongia.Text = "";
             txtTim.Text = "";
         }
@@ -51,7 +51,7 @@ namespace QuanLyNhaSachPN.View
             if (ds.Tables[0].Rows.Count == 0)
             {
                 string query = string.Format("insert into HANG values(N'{0}',N'{1}',N'{2}',N'{3}',N'{4}')"
-                , txtMahang.Text, txtTenhang.Text, txtSoluong.Text, txtDVT.Text,txtDongia.Text);
+                , txtMahang.Text, txtTenhang.Text, nbrSoLuong.Value, txtDVT.Text,txtDongia.Text);
                 bool result = kn.ThucThi(query);
                 if (result)
                 {
@@ -75,7 +75,7 @@ namespace QuanLyNhaSachPN.View
                 "TENHANG=N'{1}', SOLUONG=N'{2}', DONVITINH=N'{3}', DONGIA=N'{4}' where MAHANG=N'{0}'",
                 txtMahang.Text,
                 txtTenhang.Text,
-                txtSoluong.Text,
+                nbrSoLuong.Value,
                 txtDVT.Text,
                 txtDongia.Text
                 );
@@ -161,7 +161,7 @@ namespace QuanLyNhaSachPN.View
                 txtMahang.Text = dgvQLhang.Rows[r].Cells["MAHANG"].Value.ToString();
                 txtTenhang.Text = dgvQLhang.Rows[r].Cells["TENHANG"].Value.ToString();
                 txtDVT.Text = dgvQLhang.Rows[r].Cells["DONVITINH"].Value.ToString();
-                txtSoluong.Text = dgvQLhang.Rows[r].Cells["SOLUONG"].Value.ToString();
+                nbrSoLuong.Value = (Decimal)dgvQLhang.Rows[r].Cells["SOLUONG"].Value;
                 txtDongia.Text = dgvQLhang.Rows[r].Cells["DONGIA"].Value.ToString();
             }
         }

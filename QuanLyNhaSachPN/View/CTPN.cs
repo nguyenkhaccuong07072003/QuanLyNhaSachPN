@@ -48,7 +48,7 @@ namespace QuanLyNhaSachPN.View
             btnXoa.Enabled = false;
 
             cbMaHang.Text = "";
-            txtSoLuong.Text = "";
+            nbrSoLuong.Value = 0;
             txtGiaNhap.Text = "";
         }
         public void getdata()
@@ -59,14 +59,14 @@ namespace QuanLyNhaSachPN.View
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (txtSoLuong.Text == "")
+            if (nbrSoLuong.Value == 0)
             {
                 MessageBox.Show("Vui lòng nhập đủ thông tin");
             }
             else
             {
                 string query = string.Format("insert into CHITIETPHIEUNHAP values(N'{0}',N'{1}',N'{2}',N'{3}')"
-                , txtMaPN.Text, cbMaHang.SelectedValue, txtSoLuong.Text,txtGiaNhap.Text);
+                , txtMaPN.Text, cbMaHang.SelectedValue, nbrSoLuong.Value, txtGiaNhap.Text);
                 bool result = con.ThucThi(query);
                 if (result)
                 {
@@ -83,7 +83,7 @@ namespace QuanLyNhaSachPN.View
         private void btnSua_Click(object sender, EventArgs e)
         {
             string query = string.Format("update CHITIETPHIEUNHAP set MAHANG = N'{1}', SOLUONG=N'{2}', GIANHAP = N'{3}' where MAPHIEUNHAP=N'{0}' and MAHANG = '{1}'"
-            , txtMaPN.Text, cbMaHang.SelectedValue, txtSoLuong.Text,txtGiaNhap.Text);
+            , txtMaPN.Text, cbMaHang.SelectedValue, nbrSoLuong.Value, txtGiaNhap.Text);
 
             DataSet ds = con.LayDuLieu(query);
             bool kt = con.ThucThi(query);
@@ -162,7 +162,7 @@ namespace QuanLyNhaSachPN.View
 
                 txtMaPN.Text = dgvCTPN.Rows[r].Cells["MAPHIEUNHAP"].Value.ToString();
                 cbMaHang.SelectedValue = dgvCTPN.Rows[r].Cells["MAHANG"].Value.ToString();
-                txtSoLuong.Text = dgvCTPN.Rows[r].Cells["SOLUONG"].Value.ToString();
+                nbrSoLuong.Value = Decimal.Parse(dgvCTPN.Rows[r].Cells["SOLUONG"].Value.ToString());
                 txtGiaNhap.Text = dgvCTPN.Rows[r].Cells["GIANHAP"].Value.ToString();
             }
         }

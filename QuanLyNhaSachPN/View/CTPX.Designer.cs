@@ -30,7 +30,7 @@ namespace QuanLyNhaSachPN.View
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtSoLuong = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.cbMaHang = new System.Windows.Forms.ComboBox();
             this.txtMaPX = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,17 +46,18 @@ namespace QuanLyNhaSachPN.View
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvCTPX = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
+            this.nbrSoLuong = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTPX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nbrSoLuong)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.nbrSoLuong);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.txtSoLuong);
             this.groupBox1.Controls.Add(this.cbMaHang);
             this.groupBox1.Controls.Add(this.txtMaPX);
             this.groupBox1.Controls.Add(this.label3);
@@ -69,12 +70,15 @@ namespace QuanLyNhaSachPN.View
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // txtSoLuong
+            // label7
             // 
-            this.txtSoLuong.Location = new System.Drawing.Point(530, 53);
-            this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(203, 30);
-            this.txtSoLuong.TabIndex = 2;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(289, 8);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(250, 32);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "CHI TIẾT PHIẾU XUẤT";
             // 
             // cbMaHang
             // 
@@ -227,15 +231,12 @@ namespace QuanLyNhaSachPN.View
             this.dgvCTPX.TabIndex = 0;
             this.dgvCTPX.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTPX_CellClick);
             // 
-            // label7
+            // nbrSoLuong
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(289, 8);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(250, 32);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "CHI TIẾT PHIẾU XUẤT";
+            this.nbrSoLuong.Location = new System.Drawing.Point(529, 51);
+            this.nbrSoLuong.Name = "nbrSoLuong";
+            this.nbrSoLuong.Size = new System.Drawing.Size(209, 30);
+            this.nbrSoLuong.TabIndex = 2;
             // 
             // CTPX
             // 
@@ -256,6 +257,7 @@ namespace QuanLyNhaSachPN.View
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTPX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nbrSoLuong)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -265,7 +267,6 @@ namespace QuanLyNhaSachPN.View
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.ComboBox cbMaHang;
         private System.Windows.Forms.TextBox txtMaPX;
         private System.Windows.Forms.Label label3;
@@ -280,5 +281,6 @@ namespace QuanLyNhaSachPN.View
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.DataGridView dgvCTPX;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.NumericUpDown nbrSoLuong;
     }
 }

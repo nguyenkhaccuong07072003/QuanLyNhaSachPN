@@ -1,7 +1,6 @@
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\bin\Debug\QuanLyNhaSachPN.exe.config
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\bin\Debug\QuanLyNhaSachPN.exe
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\bin\Debug\QuanLyNhaSachPN.pdb
-D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.csproj.AssemblyReference.cache
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.DangNhap.resources
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.Properties.Resources.resources
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.TrangChu.resources
@@ -20,3 +19,4 @@ D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.CTP
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.PhieuNhap.resources
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.PhieuXuat.resources
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.QLK.resources
+D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.BaoCao.resources

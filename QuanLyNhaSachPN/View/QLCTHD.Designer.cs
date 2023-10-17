@@ -30,12 +30,12 @@ namespace QuanLyNhaSachPN.View
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.cbMahang = new System.Windows.Forms.ComboBox();
             this.txtGiatien = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtMahd = new System.Windows.Forms.TextBox();
-            this.txtSoluong = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -48,22 +48,23 @@ namespace QuanLyNhaSachPN.View
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvCTHD = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
+            this.nbrSoLuong = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTHD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nbrSoLuong)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.nbrSoLuong);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.cbMahang);
             this.groupBox1.Controls.Add(this.txtGiatien);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtMahd);
-            this.groupBox1.Controls.Add(this.txtSoluong);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -73,6 +74,16 @@ namespace QuanLyNhaSachPN.View
             this.groupBox1.Size = new System.Drawing.Size(781, 138);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(286, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(226, 32);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "CHI TIẾT HÓA ĐƠN";
             // 
             // cbMahang
             // 
@@ -113,14 +124,6 @@ namespace QuanLyNhaSachPN.View
             this.txtMahd.Name = "txtMahd";
             this.txtMahd.Size = new System.Drawing.Size(226, 30);
             this.txtMahd.TabIndex = 0;
-            // 
-            // txtSoluong
-            // 
-            this.txtSoluong.Location = new System.Drawing.Point(506, 56);
-            this.txtSoluong.Name = "txtSoluong";
-            this.txtSoluong.Size = new System.Drawing.Size(227, 30);
-            this.txtSoluong.TabIndex = 2;
-            this.txtSoluong.TextChanged += new System.EventHandler(this.txtSoluong_TextChanged);
             // 
             // label4
             // 
@@ -251,15 +254,12 @@ namespace QuanLyNhaSachPN.View
             this.dgvCTHD.TabIndex = 0;
             this.dgvCTHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTHD_CellClick);
             // 
-            // label2
+            // nbrSoLuong
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(286, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(226, 32);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "CHI TIẾT HÓA ĐƠN";
+            this.nbrSoLuong.Location = new System.Drawing.Point(506, 55);
+            this.nbrSoLuong.Name = "nbrSoLuong";
+            this.nbrSoLuong.Size = new System.Drawing.Size(222, 30);
+            this.nbrSoLuong.TabIndex = 2;
             // 
             // QLCTHD
             // 
@@ -280,6 +280,7 @@ namespace QuanLyNhaSachPN.View
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTHD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nbrSoLuong)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -293,7 +294,6 @@ namespace QuanLyNhaSachPN.View
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtMahd;
-        private System.Windows.Forms.TextBox txtSoluong;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnTim;
@@ -306,5 +306,6 @@ namespace QuanLyNhaSachPN.View
         private System.Windows.Forms.ComboBox cbMahang;
         private System.Windows.Forms.DataGridView dgvCTHD;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown nbrSoLuong;
     }
 }
