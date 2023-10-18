@@ -161,7 +161,7 @@ namespace QuanLyNhaSachPN.View
 
                 txtMaPX.Text = dgvCTPX.Rows[r].Cells["MAPHIEUXUAT"].Value.ToString();
                 cbMaHang.SelectedValue = dgvCTPX.Rows[r].Cells["MAHANG"].Value.ToString();
-                nbrSoLuong.Text = dgvCTPX.Rows[r].Cells["SOLUONG"].Value.ToString();
+                nbrSoLuong.Value = Decimal.Parse(dgvCTPX.Rows[r].Cells["SOLUONG"].Value.ToString());
             }
         }
     }

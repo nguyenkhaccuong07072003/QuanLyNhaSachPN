@@ -35,6 +35,7 @@ namespace QuanLyNhaSachPN
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.rbtnQuanLy = new System.Windows.Forms.RadioButton();
             this.rbtnNhanVien = new System.Windows.Forms.RadioButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtNhapLaiMatKhau = new System.Windows.Forms.TextBox();
@@ -45,7 +46,6 @@ namespace QuanLyNhaSachPN
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtTaiKhoan = new System.Windows.Forms.TextBox();
-            this.rbtnQuanLy = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -110,6 +110,18 @@ namespace QuanLyNhaSachPN
             this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Chức Danh";
+            // 
+            // rbtnQuanLy
+            // 
+            this.rbtnQuanLy.AutoSize = true;
+            this.rbtnQuanLy.Checked = true;
+            this.rbtnQuanLy.Location = new System.Drawing.Point(27, 31);
+            this.rbtnQuanLy.Name = "rbtnQuanLy";
+            this.rbtnQuanLy.Size = new System.Drawing.Size(93, 27);
+            this.rbtnQuanLy.TabIndex = 3;
+            this.rbtnQuanLy.TabStop = true;
+            this.rbtnQuanLy.Text = "Quan Ly";
+            this.rbtnQuanLy.UseVisualStyleBackColor = true;
             // 
             // rbtnNhanVien
             // 
@@ -204,18 +216,6 @@ namespace QuanLyNhaSachPN
             this.txtTaiKhoan.Size = new System.Drawing.Size(280, 30);
             this.txtTaiKhoan.TabIndex = 0;
             // 
-            // rbtnQuanLy
-            // 
-            this.rbtnQuanLy.AutoSize = true;
-            this.rbtnQuanLy.Checked = true;
-            this.rbtnQuanLy.Location = new System.Drawing.Point(27, 31);
-            this.rbtnQuanLy.Name = "rbtnQuanLy";
-            this.rbtnQuanLy.Size = new System.Drawing.Size(93, 27);
-            this.rbtnQuanLy.TabIndex = 3;
-            this.rbtnQuanLy.TabStop = true;
-            this.rbtnQuanLy.Text = "Quan Ly";
-            this.rbtnQuanLy.UseVisualStyleBackColor = true;
-            // 
             // DangKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -225,6 +225,7 @@ namespace QuanLyNhaSachPN
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
             this.Name = "DangKy";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DangKy";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);

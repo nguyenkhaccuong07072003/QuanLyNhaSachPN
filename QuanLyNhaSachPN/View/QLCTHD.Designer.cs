@@ -30,6 +30,7 @@ namespace QuanLyNhaSachPN.View
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.nbrSoLuong = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.cbMahang = new System.Windows.Forms.ComboBox();
             this.txtGiatien = new System.Windows.Forms.TextBox();
@@ -48,12 +49,11 @@ namespace QuanLyNhaSachPN.View
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvCTHD = new System.Windows.Forms.DataGridView();
-            this.nbrSoLuong = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nbrSoLuong)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTHD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nbrSoLuong)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -74,6 +74,14 @@ namespace QuanLyNhaSachPN.View
             this.groupBox1.Size = new System.Drawing.Size(781, 138);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // nbrSoLuong
+            // 
+            this.nbrSoLuong.Location = new System.Drawing.Point(506, 55);
+            this.nbrSoLuong.Name = "nbrSoLuong";
+            this.nbrSoLuong.Size = new System.Drawing.Size(222, 30);
+            this.nbrSoLuong.TabIndex = 2;
+            this.nbrSoLuong.Leave += new System.EventHandler(this.nbrSoLuong_Leave);
             // 
             // label2
             // 
@@ -254,13 +262,6 @@ namespace QuanLyNhaSachPN.View
             this.dgvCTHD.TabIndex = 0;
             this.dgvCTHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTHD_CellClick);
             // 
-            // nbrSoLuong
-            // 
-            this.nbrSoLuong.Location = new System.Drawing.Point(506, 55);
-            this.nbrSoLuong.Name = "nbrSoLuong";
-            this.nbrSoLuong.Size = new System.Drawing.Size(222, 30);
-            this.nbrSoLuong.TabIndex = 2;
-            // 
             // QLCTHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -272,15 +273,16 @@ namespace QuanLyNhaSachPN.View
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "QLCTHD";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QLCTHD";
             this.Load += new System.EventHandler(this.QLCTHD_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nbrSoLuong)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTHD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nbrSoLuong)).EndInit();
             this.ResumeLayout(false);
 
         }

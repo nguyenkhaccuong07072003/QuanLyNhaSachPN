@@ -30,6 +30,7 @@ namespace QuanLyNhaSachPN
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@ namespace QuanLyNhaSachPN
             this.btnQLBH = new System.Windows.Forms.Button();
             this.btnQLNV = new System.Windows.Forms.Button();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +58,17 @@ namespace QuanLyNhaSachPN
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(283, 1053);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(49, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(188, 41);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "TRANG CHỦ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnThoat
             // 
@@ -152,17 +163,6 @@ namespace QuanLyNhaSachPN
             this.panelChildForm.Size = new System.Drawing.Size(1199, 1053);
             this.panelChildForm.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(49, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 41);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "TRANG CHỦ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -172,6 +172,7 @@ namespace QuanLyNhaSachPN
             this.Controls.Add(this.panel1);
             this.MinimumSize = new System.Drawing.Size(1500, 1000);
             this.Name = "TrangChu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TrangChu";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.TrangChu_Load);

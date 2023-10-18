@@ -161,7 +161,7 @@ namespace QuanLyNhaSachPN.View
                 txtMahang.Text = dgvQLhang.Rows[r].Cells["MAHANG"].Value.ToString();
                 txtTenhang.Text = dgvQLhang.Rows[r].Cells["TENHANG"].Value.ToString();
                 txtDVT.Text = dgvQLhang.Rows[r].Cells["DONVITINH"].Value.ToString();
-                nbrSoLuong.Value = (Decimal)dgvQLhang.Rows[r].Cells["SOLUONG"].Value;
+                nbrSoLuong.Value = Decimal.Parse(dgvQLhang.Rows[r].Cells["SOLUONG"].Value.ToString());
                 txtDongia.Text = dgvQLhang.Rows[r].Cells["DONGIA"].Value.ToString();
             }
         }

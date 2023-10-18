@@ -173,9 +173,8 @@ namespace QuanLyNhaSachPN.View
 
                 txtMahd.Text = dgvCTHD.Rows[r].Cells["MAHD"].Value.ToString();
                 cbMahang.SelectedValue = dgvCTHD.Rows[r].Cells["MAHANG"].Value.ToString();
-                nbrSoLuong.Value = (Decimal) dgvCTHD.Rows[r].Cells["SOLUONG"].Value;
+                nbrSoLuong.Value = Decimal.Parse(dgvCTHD.Rows[r].Cells["SOLUONG"].Value.ToString());
                 txtGiatien.Text = dgvCTHD.Rows[r].Cells["GIATIEN"].Value.ToString();
-                showPrice();
             }
         }
     
@@ -191,9 +190,10 @@ namespace QuanLyNhaSachPN.View
             GiaTien = Soluong * DonGia;
             txtGiatien.Text = GiaTien.ToString();
         }
-        private void txtSoluong_TextChanged(object sender, EventArgs e)
+
+        private void nbrSoLuong_Leave(object sender, EventArgs e)
         {
-            if(nbrSoLuong.Value > 0)
+            if(nbrSoLuong.Value >= 0)
             {
                 showPrice();
             }
@@ -201,6 +201,7 @@ namespace QuanLyNhaSachPN.View
             {
                 txtGiatien.Text = "";
             }
+
         }
     }
 }
