@@ -25,7 +25,7 @@ namespace QuanLyNhaSachPN
             string query = string.Format("select * from NguoiDung where taikhoan = '{0}' and matkhau = '{1}'"
                 , txtTaiKhoan.Text, txtMatKhau.Text);
             DataSet ds = con.LayDuLieu(query);
-            if(txtTaiKhoan.Text == "" && txtMatKhau.Text =="")
+            if(txtTaiKhoan.Text == "" && txtMatKhau.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập tài khoản và mật khẩu!");
             }
