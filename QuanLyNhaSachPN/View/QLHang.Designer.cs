@@ -31,6 +31,7 @@ namespace QuanLyNhaSachPN.View
         {
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.nbrSoLuong = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDongia = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,12 +52,11 @@ namespace QuanLyNhaSachPN.View
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvQLhang = new System.Windows.Forms.DataGridView();
-            this.nbrSoLuong = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nbrSoLuong)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLhang)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nbrSoLuong)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -77,6 +77,18 @@ namespace QuanLyNhaSachPN.View
             this.groupBox1.Size = new System.Drawing.Size(982, 145);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // nbrSoLuong
+            // 
+            this.nbrSoLuong.Location = new System.Drawing.Point(429, 67);
+            this.nbrSoLuong.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nbrSoLuong.Name = "nbrSoLuong";
+            this.nbrSoLuong.Size = new System.Drawing.Size(222, 30);
+            this.nbrSoLuong.TabIndex = 2;
             // 
             // label2
             // 
@@ -270,13 +282,6 @@ namespace QuanLyNhaSachPN.View
             this.dgvQLhang.TabIndex = 0;
             this.dgvQLhang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQLhang_CellClick);
             // 
-            // nbrSoLuong
-            // 
-            this.nbrSoLuong.Location = new System.Drawing.Point(429, 67);
-            this.nbrSoLuong.Name = "nbrSoLuong";
-            this.nbrSoLuong.Size = new System.Drawing.Size(222, 30);
-            this.nbrSoLuong.TabIndex = 2;
-            // 
             // QLHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -292,11 +297,11 @@ namespace QuanLyNhaSachPN.View
             this.Load += new System.EventHandler(this.QLHang_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nbrSoLuong)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLhang)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nbrSoLuong)).EndInit();
             this.ResumeLayout(false);
 
         }

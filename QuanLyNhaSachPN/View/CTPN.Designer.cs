@@ -78,6 +78,11 @@ namespace QuanLyNhaSachPN.View
             // nbrSoLuong
             // 
             this.nbrSoLuong.Location = new System.Drawing.Point(520, 50);
+            this.nbrSoLuong.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.nbrSoLuong.Name = "nbrSoLuong";
             this.nbrSoLuong.Size = new System.Drawing.Size(209, 30);
             this.nbrSoLuong.TabIndex = 2;
@@ -88,7 +93,7 @@ namespace QuanLyNhaSachPN.View
             this.cbMaHang.Location = new System.Drawing.Point(193, 108);
             this.cbMaHang.Name = "cbMaHang";
             this.cbMaHang.Size = new System.Drawing.Size(178, 31);
-            this.cbMaHang.TabIndex = 11;
+            this.cbMaHang.TabIndex = 1;
             // 
             // label7
             // 

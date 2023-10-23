@@ -73,6 +73,11 @@ namespace QuanLyNhaSachPN.View
             // nbrSoLuong
             // 
             this.nbrSoLuong.Location = new System.Drawing.Point(529, 51);
+            this.nbrSoLuong.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.nbrSoLuong.Name = "nbrSoLuong";
             this.nbrSoLuong.Size = new System.Drawing.Size(209, 30);
             this.nbrSoLuong.TabIndex = 2;

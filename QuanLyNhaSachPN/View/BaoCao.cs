@@ -16,5 +16,6 @@ namespace QuanLyNhaSachPN
         {
             InitializeComponent();
         }
+
     }
 }

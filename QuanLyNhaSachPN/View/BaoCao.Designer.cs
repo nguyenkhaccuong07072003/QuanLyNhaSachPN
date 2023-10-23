@@ -30,33 +30,45 @@ namespace QuanLyNhaSachPN
         private void InitializeComponent()
         {
             this.label5 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(398, 29);
+            this.label5.Location = new System.Drawing.Point(492, 27);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(133, 32);
             this.label5.TabIndex = 4;
             this.label5.Text = "THỐNG KÊ";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Location = new System.Drawing.Point(0, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1184, 752);
+            this.panel1.TabIndex = 5;
+            // 
             // BaoCao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 573);
-            this.Controls.Add(this.label5);
+            this.ClientSize = new System.Drawing.Size(1182, 753);
+            this.Controls.Add(this.panel1);
             this.Name = "BaoCao";
             this.Text = "BaoCao";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -164,5 +164,6 @@ namespace QuanLyNhaSachPN.View
                 nbrSoLuong.Value = Decimal.Parse(dgvCTPX.Rows[r].Cells["SOLUONG"].Value.ToString());
             }
         }
+
     }
 }
