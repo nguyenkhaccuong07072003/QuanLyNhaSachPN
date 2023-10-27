@@ -24,6 +24,10 @@ namespace QuanLyNhaSachPN.View
             string query = "select * from HOADON";
             DataSet ds = con.LayDuLieu(query);
             dgvHoaDon.DataSource = ds.Tables[0];
+
+
+            dgvHoaDon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvHoaDon.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
         public void clear()
         {

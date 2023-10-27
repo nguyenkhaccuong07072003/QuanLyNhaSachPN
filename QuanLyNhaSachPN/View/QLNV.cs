@@ -24,6 +24,10 @@ namespace QuanLyNhaSachPN
             string query = "select * from NHANVIEN";
             DataSet ds = kn.LayDuLieu(query);
             dgvNhanVien.DataSource = ds.Tables[0];
+
+
+            dgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvNhanVien.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
         public void clear()
         {

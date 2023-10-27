@@ -29,6 +29,9 @@ namespace QuanLyNhaSachPN.View
             string query = String.Format("Select * from CHITIETPHIEUXUAT where  MAPHIEUXUAT = '{0}' ", maPX);
             DataSet ds = con.LayDuLieu(query);
             dgvCTPX.DataSource = ds.Tables[0];
+
+            dgvCTPX.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvCTPX.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
         public void getmahang()
         {

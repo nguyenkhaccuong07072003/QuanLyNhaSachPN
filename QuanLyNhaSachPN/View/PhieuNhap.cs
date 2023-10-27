@@ -29,6 +29,9 @@ namespace QuanLyNhaSachPN.View
             string query = "select * from PHIEUNHAP";
             DataSet ds = con.LayDuLieu(query);
             dgvPhieuNhap.DataSource = ds.Tables[0];
+
+            dgvPhieuNhap.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvPhieuNhap.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
         public void clear()
         {

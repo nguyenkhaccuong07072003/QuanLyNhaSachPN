@@ -23,6 +23,9 @@ namespace QuanLyNhaSachPN
             string query = "Select * from NHACUNGCAP";
             DataSet ds = kn.LayDuLieu(query);
             dgvNCC.DataSource = ds.Tables[0];
+
+            dgvNCC.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvNCC.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
         public void clear()
         {

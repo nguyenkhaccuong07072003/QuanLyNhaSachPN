@@ -41,6 +41,9 @@ namespace QuanLyNhaSachPN.View
             string query = String.Format("Select * from CHITIETHOADON where  MAHD = '{0}' ",maHD);
             DataSet ds = con.LayDuLieu(query);  
             dgvCTHD.DataSource = ds.Tables[0];
+
+            dgvCTHD.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvCTHD.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
         public void getmahang()
         {

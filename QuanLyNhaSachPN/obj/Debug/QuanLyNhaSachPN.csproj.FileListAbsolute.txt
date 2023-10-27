@@ -20,3 +20,4 @@ D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.Phi
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.PhieuXuat.resources
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.QLK.resources
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.BaoCao.resources
+D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.csproj.AssemblyReference.cache

@@ -23,6 +23,9 @@ namespace QuanLyNhaSachPN.View
             string query = "select * from HANG";
             DataSet ds = kn.LayDuLieu(query);
             dgvQLhang.DataSource = ds.Tables[0];
+
+            dgvQLhang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvQLhang.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
         public void clear()
         {

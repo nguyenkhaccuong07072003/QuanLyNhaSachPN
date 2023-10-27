@@ -56,6 +56,9 @@ namespace QuanLyNhaSachPN.View
             string query = String.Format("Select * from CHITIETPHIEUNHAP where  MAPHIEUNHAP = '{0}' ", maPN);
             DataSet ds = con.LayDuLieu(query);
             dgvCTPN.DataSource = ds.Tables[0];
+
+            dgvCTPN.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvCTPN.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
