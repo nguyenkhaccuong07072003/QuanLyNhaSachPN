@@ -36,7 +36,7 @@ namespace QuanLyNhaSachPN
                 if (nmrThang.Value == 0)
                 {
                     string query = string.Format("SELECT(SELECT SUM(THANHTIEN) FROM HOADON WHERE YEAR(HOADON.NGAYLAP) = '{0}') -" +
-                                                   "(SELECT SUM(TONGTIEN) FROM PHIEUNHAP WHERE YEAR(PHIEUNHAP.NGAYNHAP) = '{0}') AS 'DOANH THU NAM'", nmrNam.Value);
+                                                   "(SELECT SUM(TONGTIEN) FROM PHIEUNHAP WHERE YEAR(PHIEUNHAP.NGAYNHAP) = '{0}') AS 'DOANH THU NĂM'", nmrNam.Value);
                     DataSet ds = con.LayDuLieu(query);
                     dgvThongKe.DataSource = ds.Tables[0];
                 }
@@ -49,7 +49,7 @@ namespace QuanLyNhaSachPN
                     else
                     {
                         string query = string.Format(" SELECT (SELECT SUM(THANHTIEN) FROM HOADON WHERE MONTH(HOADON.NGAYLAP) = '{0}' AND YEAR(HOADON.NGAYLAP) = '{1}') -" +
-                                                       "(SELECT SUM(TONGTIEN) FROM PHIEUNHAP WHERE MONTH(PHIEUNHAP.NGAYNHAP) = '{0}' AND YEAR(PHIEUNHAP.NGAYNHAP) = '{1}') AS 'DOANH THU THANG'", nmrThang.Value, nmrNam.Value);
+                                                       "(SELECT SUM(TONGTIEN) FROM PHIEUNHAP WHERE MONTH(PHIEUNHAP.NGAYNHAP) = '{0}' AND YEAR(PHIEUNHAP.NGAYNHAP) = '{1}') AS 'DOANH THU THÁNG'", nmrThang.Value, nmrNam.Value);
                         DataSet ds = con.LayDuLieu(query);
                         dgvThongKe.DataSource = ds.Tables[0];
                     }
@@ -58,9 +58,7 @@ namespace QuanLyNhaSachPN
         }
         private void ResetData()
         {
-
             DataSet dataset = new DataSet();
-
             dgvThongKe.DataSource = dataset;
         }
         private void btnLamMoi_Click(object sender, EventArgs e)
