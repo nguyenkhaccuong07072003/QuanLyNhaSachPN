@@ -162,5 +162,13 @@ namespace QuanLyNhaSachPN
                 txtDiaChi.Text = dgvNCC.Rows[r].Cells["DIACHI"].Value.ToString();
             }
         }
+
+        private void txtTim_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTim.Text == "")
+            {
+                getdata();
+            }
+        }
     }
 }

@@ -178,23 +178,24 @@ namespace QuanLyNhaSachPN.View
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(95, 45);
             this.btnTim.TabIndex = 8;
-            this.btnTim.Text = "Search";
+            this.btnTim.Text = "Tìm Kiếm";
             this.btnTim.UseVisualStyleBackColor = true;
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // txtTim
             // 
             this.txtTim.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTim.Location = new System.Drawing.Point(164, 108);
+            this.txtTim.Location = new System.Drawing.Point(164, 89);
             this.txtTim.Name = "txtTim";
             this.txtTim.Size = new System.Drawing.Size(565, 30);
             this.txtTim.TabIndex = 9;
+            this.txtTim.TextChanged += new System.EventHandler(this.txtTim_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(49, 108);
+            this.label4.Location = new System.Drawing.Point(49, 89);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 23);
             this.label4.TabIndex = 26;
@@ -207,7 +208,7 @@ namespace QuanLyNhaSachPN.View
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(90, 47);
             this.btnReset.TabIndex = 7;
-            this.btnReset.Text = "Reset";
+            this.btnReset.Text = "Làm Mới";
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 

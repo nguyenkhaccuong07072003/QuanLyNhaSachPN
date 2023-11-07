@@ -30,6 +30,7 @@ namespace QuanLyNhaSachPN
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMaNCC = new System.Windows.Forms.TextBox();
@@ -48,7 +49,6 @@ namespace QuanLyNhaSachPN
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvNCC = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -73,13 +73,23 @@ namespace QuanLyNhaSachPN
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(407, 26);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(159, 28);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "NHÀ CUNG CẤP";
+            // 
             // txtDiaChi
             // 
             this.txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(597, 131);
+            this.txtDiaChi.Location = new System.Drawing.Point(610, 82);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(340, 30);
-            this.txtDiaChi.TabIndex = 3;
+            this.txtDiaChi.TabIndex = 2;
             // 
             // label3
             // 
@@ -102,10 +112,10 @@ namespace QuanLyNhaSachPN
             // txtSDT
             // 
             this.txtSDT.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSDT.Location = new System.Drawing.Point(597, 86);
+            this.txtSDT.Location = new System.Drawing.Point(610, 134);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(340, 30);
-            this.txtSDT.TabIndex = 2;
+            this.txtSDT.TabIndex = 3;
             // 
             // txtTenNCC
             // 
@@ -129,7 +139,7 @@ namespace QuanLyNhaSachPN
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(464, 89);
+            this.label6.Location = new System.Drawing.Point(477, 137);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(111, 23);
             this.label6.TabIndex = 14;
@@ -139,7 +149,7 @@ namespace QuanLyNhaSachPN
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(464, 138);
+            this.label5.Location = new System.Drawing.Point(477, 89);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 23);
             this.label5.TabIndex = 13;
@@ -168,6 +178,7 @@ namespace QuanLyNhaSachPN
             this.txtTim.Name = "txtTim";
             this.txtTim.Size = new System.Drawing.Size(460, 30);
             this.txtTim.TabIndex = 9;
+            this.txtTim.TextChanged += new System.EventHandler(this.txtTim_TextChanged);
             // 
             // label2
             // 
@@ -253,16 +264,6 @@ namespace QuanLyNhaSachPN
             this.dgvNCC.Size = new System.Drawing.Size(982, 278);
             this.dgvNCC.TabIndex = 0;
             this.dgvNCC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNCC_CellClick);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(407, 26);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(159, 28);
-            this.label8.TabIndex = 27;
-            this.label8.Text = "NHÀ CUNG CẤP";
             // 
             // QLNCC
             // 

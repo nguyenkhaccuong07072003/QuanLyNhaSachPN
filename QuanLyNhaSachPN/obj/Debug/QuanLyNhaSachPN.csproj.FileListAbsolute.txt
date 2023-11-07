@@ -15,9 +15,7 @@ D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.QLC
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.QLHang.resources
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.QLHD.resources
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.CTPN.resources
-D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.CTPX.resources
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.PhieuNhap.resources
-D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.PhieuXuat.resources
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.QLK.resources
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.BaoCao.resources
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.csproj.AssemblyReference.cache

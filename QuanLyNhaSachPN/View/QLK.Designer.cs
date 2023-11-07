@@ -31,7 +31,6 @@ namespace QuanLyNhaSachPN.View
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnHangHoa = new System.Windows.Forms.Button();
-            this.btnPhieuXuat = new System.Windows.Forms.Button();
             this.btnPhieuNhap = new System.Windows.Forms.Button();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -40,7 +39,6 @@ namespace QuanLyNhaSachPN.View
             // panel1
             // 
             this.panel1.Controls.Add(this.btnHangHoa);
-            this.panel1.Controls.Add(this.btnPhieuXuat);
             this.panel1.Controls.Add(this.btnPhieuNhap);
             this.panel1.Location = new System.Drawing.Point(-1, 3);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -51,7 +49,7 @@ namespace QuanLyNhaSachPN.View
             // btnHangHoa
             // 
             this.btnHangHoa.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHangHoa.Location = new System.Drawing.Point(583, 14);
+            this.btnHangHoa.Location = new System.Drawing.Point(303, 14);
             this.btnHangHoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHangHoa.Name = "btnHangHoa";
             this.btnHangHoa.Size = new System.Drawing.Size(230, 67);
@@ -59,18 +57,6 @@ namespace QuanLyNhaSachPN.View
             this.btnHangHoa.Text = "HÀNG HÓA";
             this.btnHangHoa.UseVisualStyleBackColor = true;
             this.btnHangHoa.Click += new System.EventHandler(this.btnHangHoa_Click);
-            // 
-            // btnPhieuXuat
-            // 
-            this.btnPhieuXuat.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPhieuXuat.Location = new System.Drawing.Point(296, 14);
-            this.btnPhieuXuat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnPhieuXuat.Name = "btnPhieuXuat";
-            this.btnPhieuXuat.Size = new System.Drawing.Size(230, 67);
-            this.btnPhieuXuat.TabIndex = 1;
-            this.btnPhieuXuat.Text = "PHIẾU XUẤT";
-            this.btnPhieuXuat.UseVisualStyleBackColor = true;
-            this.btnPhieuXuat.Click += new System.EventHandler(this.btnPhieuXuat_Click);
             // 
             // btnPhieuNhap
             // 
@@ -111,7 +97,6 @@ namespace QuanLyNhaSachPN.View
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnPhieuNhap;
-        private System.Windows.Forms.Button btnPhieuXuat;
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Button btnHangHoa;
     }

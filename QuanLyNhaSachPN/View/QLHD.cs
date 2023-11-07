@@ -188,5 +188,13 @@ namespace QuanLyNhaSachPN.View
                 frm.Show();
             }
         }
+
+        private void txtTim_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTim.Text == "")
+            {
+                getdata();
+            }
+        }
     }
 }

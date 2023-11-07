@@ -191,7 +191,7 @@ namespace QuanLyNhaSachPN.View
             DonGia = float.Parse(ds.Tables[0].Rows[0]["DONGIA"].ToString());
 
             GiaTien = Soluong * DonGia;
-            txtGiatien.Text = GiaTien.ToString();
+            txtGiatien.Text = GiaTien.ToString();   
         }
 
         private void nbrSoLuong_Leave(object sender, EventArgs e)
@@ -205,6 +205,14 @@ namespace QuanLyNhaSachPN.View
                 txtGiatien.Text = "";
             }
 
+        }
+
+        private void txtTim_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTim.Text == "")
+            {
+                getdata();
+            }
         }
     }
 }

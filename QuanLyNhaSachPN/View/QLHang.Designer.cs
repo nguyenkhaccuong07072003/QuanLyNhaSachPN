@@ -196,7 +196,7 @@ namespace QuanLyNhaSachPN.View
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(95, 45);
             this.btnTim.TabIndex = 9;
-            this.btnTim.Text = "Search";
+            this.btnTim.Text = "Tìm Kiếm";
             this.btnTim.UseVisualStyleBackColor = true;
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
@@ -207,6 +207,7 @@ namespace QuanLyNhaSachPN.View
             this.txtTim.Name = "txtTim";
             this.txtTim.Size = new System.Drawing.Size(565, 30);
             this.txtTim.TabIndex = 10;
+            this.txtTim.TextChanged += new System.EventHandler(this.txtTim_TextChanged);
             // 
             // label1
             // 
@@ -225,7 +226,7 @@ namespace QuanLyNhaSachPN.View
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(90, 47);
             this.btnReset.TabIndex = 8;
-            this.btnReset.Text = "Reset";
+            this.btnReset.Text = "Làm Mới";
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 

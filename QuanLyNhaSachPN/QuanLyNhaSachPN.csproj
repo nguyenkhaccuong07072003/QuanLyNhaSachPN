@@ -59,12 +59,6 @@
     <Compile Include="View\CTPN.Designer.cs">
       <DependentUpon>CTPN.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\CTPX.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\CTPX.Designer.cs">
-      <DependentUpon>CTPX.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\DangKy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,12 +76,6 @@
     </Compile>
     <Compile Include="View\PhieuNhap.Designer.cs">
       <DependentUpon>PhieuNhap.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\PhieuXuat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\PhieuXuat.Designer.cs">
-      <DependentUpon>PhieuXuat.cs</DependentUpon>
     </Compile>
     <Compile Include="View\QLCTHD.cs">
       <SubType>Form</SubType>
@@ -139,9 +127,6 @@
     <EmbeddedResource Include="View\CTPN.resx">
       <DependentUpon>CTPN.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\CTPX.resx">
-      <DependentUpon>CTPX.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\DangKy.resx">
       <DependentUpon>DangKy.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,9 +144,6 @@
     </Compile>
     <EmbeddedResource Include="View\PhieuNhap.resx">
       <DependentUpon>PhieuNhap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\PhieuXuat.resx">
-      <DependentUpon>PhieuXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\QLCTHD.resx">
       <DependentUpon>QLCTHD.cs</DependentUpon>

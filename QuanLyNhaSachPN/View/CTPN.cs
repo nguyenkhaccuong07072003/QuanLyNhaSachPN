@@ -169,5 +169,13 @@ namespace QuanLyNhaSachPN.View
                 txtGiaNhap.Text = dgvCTPN.Rows[r].Cells["GIANHAP"].Value.ToString();
             }
         }
+
+        private void txtTim_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTim.Text == "")
+            {
+                getdata();
+            }
+        }
     }
 }

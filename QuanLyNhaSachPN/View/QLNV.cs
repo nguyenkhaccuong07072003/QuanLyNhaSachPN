@@ -39,7 +39,6 @@ namespace QuanLyNhaSachPN
             txtManv.Text = "";
             txtTennv.Text = "";
             txtDiachi.Text = "";
-            txtluong.Text = "";
             txtSDT.Text = "";
             txtTim.Text = "";
             dtpNgSinh.Value = DateTime.Now;
@@ -59,8 +58,8 @@ namespace QuanLyNhaSachPN
             DataSet ds = kn.LayDuLieu(checkMANV);
             if (ds.Tables[0].Rows.Count == 0)
             {
-                    string query = string.Format("insert into NHANVIEN values(N'{0}',N'{1}',N'{2}',N'{3}',N'{4}',N'{5}',N'{6}')"
-                    , txtManv.Text, txtTennv.Text, dtpNgSinh.Value.ToString("yyyy/MM/dd"),gioitinh,txtDiachi.Text,txtSDT.Text,txtluong.Text);
+                    string query = string.Format("insert into NHANVIEN values(N'{0}',N'{1}',N'{2}',N'{3}',N'{4}',N'{5}')"
+                    , txtManv.Text, txtTennv.Text, dtpNgSinh.Value.ToString("yyyy/MM/dd"),gioitinh,txtDiachi.Text,txtSDT.Text);
                     bool result = kn.ThucThi(query);
                     if (result)
                     {
@@ -88,14 +87,13 @@ namespace QuanLyNhaSachPN
             {
                 gioitinh = rdbtnNu.Text;
             }
-            string query = string.Format("update NHANVIEN set TENNV=N'{1}', NGAYSINH=N'{2}', GIOITINH=N'{3}', DIACHI=N'{4}', SDT=N'{5}',LUONG=N'{6}' where MANV=N'{0}'",
+            string query = string.Format("update NHANVIEN set TENNV=N'{1}', NGAYSINH=N'{2}', GIOITINH=N'{3}', DIACHI=N'{4}', SDT=N'{5}' where MANV=N'{0}'",
                 txtManv.Text,
                 txtTennv.Text,
                 dtpNgSinh.Value.ToString("yyyy/MM/dd"),
                 gioitinh,
                 txtDiachi.Text,
-                txtSDT.Text,
-                txtluong.Text
+                txtSDT.Text
                 );
             bool kt = kn.ThucThi(query);
             if (kt)
@@ -142,8 +140,7 @@ namespace QuanLyNhaSachPN
                 "NGAYSINH like N'%{0}%' or " +
                 "GIOITINH like N'%{0}%' or " +
                 "DIACHI like N'%{0}%' or " +
-                "SDT like N'%{0}%' or " +
-                "LUONG like N'%{0}%' ",
+                "SDT like N'%{0}%' " ,
                 txtTim.Text
                 );
             try
@@ -180,7 +177,6 @@ namespace QuanLyNhaSachPN
                 dtpNgSinh.Text = dgvNhanVien.Rows[r].Cells["NGAYSINH"].Value.ToString();
                 txtDiachi.Text = dgvNhanVien.Rows[r].Cells["DIACHI"].Value.ToString();
                 txtSDT.Text = dgvNhanVien.Rows[r].Cells["SDT"].Value.ToString();
-                txtluong.Text = dgvNhanVien.Rows[r].Cells["LUONG"].Value.ToString();
                 gioitinh = dgvNhanVien.Rows[r].Cells["GIOITINH"].Value.ToString();
             }
         }
@@ -188,6 +184,14 @@ namespace QuanLyNhaSachPN
         private void QLNV_Load(object sender, EventArgs e)
         {
             getdata();
+        }
+
+        private void txtTim_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTim.Text == "")
+            {
+                getdata();
+            }  
         }
     }
 }

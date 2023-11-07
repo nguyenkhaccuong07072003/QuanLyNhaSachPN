@@ -30,6 +30,7 @@ namespace QuanLyNhaSachPN.View
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.dtpNgayNhap = new System.Windows.Forms.DateTimePicker();
             this.cbMaNV = new System.Windows.Forms.ComboBox();
@@ -50,7 +51,6 @@ namespace QuanLyNhaSachPN.View
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvPhieuNhap = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -75,6 +75,16 @@ namespace QuanLyNhaSachPN.View
             this.groupBox1.Size = new System.Drawing.Size(982, 164);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(405, 26);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(156, 32);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "PHIẾU NHẬP";
             // 
             // txtTongTien
             // 
@@ -181,7 +191,7 @@ namespace QuanLyNhaSachPN.View
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(95, 45);
             this.btnTim.TabIndex = 9;
-            this.btnTim.Text = "Search";
+            this.btnTim.Text = "Tìm Kiếm";
             this.btnTim.UseVisualStyleBackColor = true;
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
@@ -192,6 +202,7 @@ namespace QuanLyNhaSachPN.View
             this.txtTim.Name = "txtTim";
             this.txtTim.Size = new System.Drawing.Size(565, 30);
             this.txtTim.TabIndex = 10;
+            this.txtTim.TextChanged += new System.EventHandler(this.txtTim_TextChanged);
             // 
             // label5
             // 
@@ -210,7 +221,7 @@ namespace QuanLyNhaSachPN.View
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(90, 47);
             this.btnReset.TabIndex = 8;
-            this.btnReset.Text = "Reset";
+            this.btnReset.Text = "Làm Mới";
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
@@ -267,16 +278,6 @@ namespace QuanLyNhaSachPN.View
             this.dgvPhieuNhap.TabIndex = 0;
             this.dgvPhieuNhap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhieuNhap_CellClick);
             this.dgvPhieuNhap.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPhieuNhap_CellMouseDoubleClick);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(405, 26);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(156, 32);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "PHIẾU NHẬP";
             // 
             // PhieuNhap
             // 

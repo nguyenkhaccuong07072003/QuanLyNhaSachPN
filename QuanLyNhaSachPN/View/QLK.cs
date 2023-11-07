@@ -37,10 +37,6 @@ namespace QuanLyNhaSachPN.View
             openChildForm(new PhieuNhap());
         }
 
-        private void btnPhieuXuat_Click(object sender, EventArgs e)
-        {
-            openChildForm(new PhieuXuat());
-        }
 
         private void btnHangHoa_Click(object sender, EventArgs e)
         {

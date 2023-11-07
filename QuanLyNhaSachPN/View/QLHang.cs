@@ -168,5 +168,13 @@ namespace QuanLyNhaSachPN.View
                 txtDongia.Text = dgvQLhang.Rows[r].Cells["DONGIA"].Value.ToString();
             }
         }
+
+        private void txtTim_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTim.Text == "")
+            {
+                getdata();
+            }
+        }
     }
 }
