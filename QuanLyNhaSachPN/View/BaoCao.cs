@@ -26,7 +26,7 @@ namespace QuanLyNhaSachPN
 
         private void btnTao_Click(object sender, EventArgs e)
         {
-            if (nmrNam.Value == 0)
+/*            if (nmrNam.Value == 0)
             {
                 MessageBox.Show("Vui lòng nhập năm cần lập thống kê!");
             }
@@ -53,7 +53,8 @@ namespace QuanLyNhaSachPN
                         dgvThongKe.DataSource = ds.Tables[0];
                     }
                 }
-            }
+            }*/
+
         }
         private void ResetData()
         {
