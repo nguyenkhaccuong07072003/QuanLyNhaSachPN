@@ -151,22 +151,24 @@ namespace QuanLyNhaSachPN
             // 
             // btnQLNV
             // 
+            this.btnQLNV.BackColor = System.Drawing.SystemColors.Control;
             this.btnQLNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLNV.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLNV.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnQLNV.Location = new System.Drawing.Point(0, 96);
             this.btnQLNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQLNV.Name = "btnQLNV";
             this.btnQLNV.Size = new System.Drawing.Size(283, 100);
             this.btnQLNV.TabIndex = 1;
             this.btnQLNV.Text = "QUẢN LÝ NHÂN VIÊN";
-            this.btnQLNV.UseVisualStyleBackColor = true;
+            this.btnQLNV.UseVisualStyleBackColor = false;
             this.btnQLNV.Click += new System.EventHandler(this.btnQLNV_Click);
             // 
             // panelChildForm
             // 
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(283, 0);
-            this.panelChildForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelChildForm.Margin = new System.Windows.Forms.Padding(4);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1088, 750);
             this.panelChildForm.TabIndex = 1;
@@ -201,9 +203,9 @@ namespace QuanLyNhaSachPN
         private System.Windows.Forms.Button btnQLNCC;
         private System.Windows.Forms.Button btnQLK;
         private System.Windows.Forms.Button btnQLBH;
-        private System.Windows.Forms.Button btnQLNV;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelChildForm;
+        private System.Windows.Forms.Button btnQLNV;
     }
 }
 
