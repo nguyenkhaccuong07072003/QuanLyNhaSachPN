@@ -69,5 +69,7 @@ namespace QuanLyNhaSachPN
                 MessageBox.Show("Tài khoản đã tồn tại!");
             }    
         }
+
+
     }
 }

@@ -55,15 +55,16 @@ namespace QuanLyNhaSachPN
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(283, 1053);
+            this.panel1.Size = new System.Drawing.Size(283, 750);
             this.panel1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(49, 24);
+            this.label1.Location = new System.Drawing.Point(49, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(188, 41);
             this.label1.TabIndex = 8;
@@ -75,6 +76,7 @@ namespace QuanLyNhaSachPN
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Location = new System.Drawing.Point(168, 581);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(100, 60);
             this.btnThoat.TabIndex = 7;
@@ -87,6 +89,7 @@ namespace QuanLyNhaSachPN
             this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangXuat.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.Location = new System.Drawing.Point(12, 581);
+            this.btnDangXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(100, 60);
             this.btnDangXuat.TabIndex = 6;
@@ -99,6 +102,7 @@ namespace QuanLyNhaSachPN
             this.btnThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThongKe.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongKe.Location = new System.Drawing.Point(0, 475);
+            this.btnThongKe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(283, 100);
             this.btnThongKe.TabIndex = 5;
@@ -111,6 +115,7 @@ namespace QuanLyNhaSachPN
             this.btnQLNCC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLNCC.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLNCC.Location = new System.Drawing.Point(0, 382);
+            this.btnQLNCC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQLNCC.Name = "btnQLNCC";
             this.btnQLNCC.Size = new System.Drawing.Size(283, 100);
             this.btnQLNCC.TabIndex = 4;
@@ -123,6 +128,7 @@ namespace QuanLyNhaSachPN
             this.btnQLK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLK.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLK.Location = new System.Drawing.Point(0, 286);
+            this.btnQLK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQLK.Name = "btnQLK";
             this.btnQLK.Size = new System.Drawing.Size(283, 100);
             this.btnQLK.TabIndex = 3;
@@ -135,6 +141,7 @@ namespace QuanLyNhaSachPN
             this.btnQLBH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLBH.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLBH.Location = new System.Drawing.Point(0, 191);
+            this.btnQLBH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQLBH.Name = "btnQLBH";
             this.btnQLBH.Size = new System.Drawing.Size(283, 100);
             this.btnQLBH.TabIndex = 2;
@@ -147,6 +154,7 @@ namespace QuanLyNhaSachPN
             this.btnQLNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLNV.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQLNV.Location = new System.Drawing.Point(0, 96);
+            this.btnQLNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQLNV.Name = "btnQLNV";
             this.btnQLNV.Size = new System.Drawing.Size(283, 100);
             this.btnQLNV.TabIndex = 1;
@@ -157,22 +165,22 @@ namespace QuanLyNhaSachPN
             // panelChildForm
             // 
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelChildForm.Location = new System.Drawing.Point(283, 0);
-            this.panelChildForm.MaximumSize = new System.Drawing.Size(1500, 1000);
-            this.panelChildForm.MinimumSize = new System.Drawing.Size(1199, 1053);
+            this.panelChildForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1199, 1053);
+            this.panelChildForm.Size = new System.Drawing.Size(1088, 750);
             this.panelChildForm.TabIndex = 1;
+            this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
             // 
             // TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1482, 1053);
+            this.ClientSize = new System.Drawing.Size(1371, 750);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panel1);
-            this.MinimumSize = new System.Drawing.Size(1500, 1000);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(1363, 724);
             this.Name = "TrangChu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TrangChu";
@@ -194,8 +202,8 @@ namespace QuanLyNhaSachPN
         private System.Windows.Forms.Button btnQLK;
         private System.Windows.Forms.Button btnQLBH;
         private System.Windows.Forms.Button btnQLNV;
-        private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panelChildForm;
     }
 }
 

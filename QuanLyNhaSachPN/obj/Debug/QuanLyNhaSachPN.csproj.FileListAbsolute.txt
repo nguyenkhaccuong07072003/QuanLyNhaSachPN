@@ -19,3 +19,45 @@ D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.Phi
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.QLK.resources
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.BaoCao.resources
 D:\DoAnLT.net\QuanLyNhaSachPN\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.csproj.AssemblyReference.cache
+C:\Users\2 thang\Desktop\Đồ Án 2023 Giúp hoặc có tiền\Đức\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\bin\Debug\QuanLyNhaSachPN.exe.config
+C:\Users\2 thang\Desktop\Đồ Án 2023 Giúp hoặc có tiền\Đức\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\bin\Debug\QuanLyNhaSachPN.exe
+C:\Users\2 thang\Desktop\Đồ Án 2023 Giúp hoặc có tiền\Đức\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\bin\Debug\QuanLyNhaSachPN.pdb
+C:\Users\2 thang\Desktop\Đồ Án 2023 Giúp hoặc có tiền\Đức\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.csproj.AssemblyReference.cache
+C:\Users\2 thang\Desktop\Đồ Án 2023 Giúp hoặc có tiền\Đức\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.BaoCao.resources
+C:\Users\2 thang\Desktop\Đồ Án 2023 Giúp hoặc có tiền\Đức\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.CTPN.resources
+C:\Users\2 thang\Desktop\Đồ Án 2023 Giúp hoặc có tiền\Đức\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.DangKy.resources
+C:\Users\2 thang\Desktop\Đồ Án 2023 Giúp hoặc có tiền\Đức\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.DangNhap.resources
+C:\Users\2 thang\Desktop\Đồ Án 2023 Giúp hoặc có tiền\Đức\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.Properties.Resources.resources
+C:\Users\2 thang\Desktop\Đồ Án 2023 Giúp hoặc có tiền\Đức\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.PhieuNhap.resources
+C:\Users\2 thang\Desktop\Đồ Án 2023 Giúp hoặc có tiền\Đức\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.QLCTHD.resources
+C:\Users\2 thang\Desktop\Đồ Án 2023 Giúp hoặc có tiền\Đức\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.QLHang.resources
+C:\Users\2 thang\Desktop\Đồ Án 2023 Giúp hoặc có tiền\Đức\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.QLHD.resources
+C:\Users\2 thang\Desktop\Đồ Án 2023 Giúp hoặc có tiền\Đức\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.QLK.resources
+C:\Users\2 thang\Desktop\Đồ Án 2023 Giúp hoặc có tiền\Đức\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.QLNCC.resources
+C:\Users\2 thang\Desktop\Đồ Án 2023 Giúp hoặc có tiền\Đức\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.QLNV.resources
+C:\Users\2 thang\Desktop\Đồ Án 2023 Giúp hoặc có tiền\Đức\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.TrangChu.resources
+C:\Users\2 thang\Desktop\Đồ Án 2023 Giúp hoặc có tiền\Đức\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.csproj.GenerateResource.cache
+C:\Users\2 thang\Desktop\Đồ Án 2023 Giúp hoặc có tiền\Đức\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.csproj.CoreCompileInputs.cache
+C:\Users\2 thang\Desktop\Đồ Án 2023 Giúp hoặc có tiền\Đức\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.exe
+C:\Users\2 thang\Desktop\Đồ Án 2023 Giúp hoặc có tiền\Đức\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.pdb
+C:\Users\Ta Ngoc Duc\OneDrive\Máy tính\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\bin\Debug\QuanLyNhaSachPN.exe.config
+C:\Users\Ta Ngoc Duc\OneDrive\Máy tính\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\bin\Debug\QuanLyNhaSachPN.exe
+C:\Users\Ta Ngoc Duc\OneDrive\Máy tính\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\bin\Debug\QuanLyNhaSachPN.pdb
+C:\Users\Ta Ngoc Duc\OneDrive\Máy tính\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.csproj.AssemblyReference.cache
+C:\Users\Ta Ngoc Duc\OneDrive\Máy tính\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.BaoCao.resources
+C:\Users\Ta Ngoc Duc\OneDrive\Máy tính\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.CTPN.resources
+C:\Users\Ta Ngoc Duc\OneDrive\Máy tính\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.DangKy.resources
+C:\Users\Ta Ngoc Duc\OneDrive\Máy tính\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.DangNhap.resources
+C:\Users\Ta Ngoc Duc\OneDrive\Máy tính\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.Properties.Resources.resources
+C:\Users\Ta Ngoc Duc\OneDrive\Máy tính\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.PhieuNhap.resources
+C:\Users\Ta Ngoc Duc\OneDrive\Máy tính\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.QLCTHD.resources
+C:\Users\Ta Ngoc Duc\OneDrive\Máy tính\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.QLHang.resources
+C:\Users\Ta Ngoc Duc\OneDrive\Máy tính\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.QLHD.resources
+C:\Users\Ta Ngoc Duc\OneDrive\Máy tính\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.View.QLK.resources
+C:\Users\Ta Ngoc Duc\OneDrive\Máy tính\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.QLNCC.resources
+C:\Users\Ta Ngoc Duc\OneDrive\Máy tính\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.QLNV.resources
+C:\Users\Ta Ngoc Duc\OneDrive\Máy tính\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.TrangChu.resources
+C:\Users\Ta Ngoc Duc\OneDrive\Máy tính\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.csproj.GenerateResource.cache
+C:\Users\Ta Ngoc Duc\OneDrive\Máy tính\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.csproj.CoreCompileInputs.cache
+C:\Users\Ta Ngoc Duc\OneDrive\Máy tính\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.exe
+C:\Users\Ta Ngoc Duc\OneDrive\Máy tính\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN-main\QuanLyNhaSachPN\obj\Debug\QuanLyNhaSachPN.pdb

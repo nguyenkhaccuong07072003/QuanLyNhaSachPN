@@ -40,10 +40,11 @@ namespace QuanLyNhaSachPN.View
             // 
             this.panel1.Controls.Add(this.btnHangHoa);
             this.panel1.Controls.Add(this.btnPhieuNhap);
-            this.panel1.Location = new System.Drawing.Point(-1, 3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1085, 89);
+            this.panel1.Size = new System.Drawing.Size(1082, 64);
             this.panel1.TabIndex = 0;
             // 
             // btnHangHoa
@@ -52,7 +53,7 @@ namespace QuanLyNhaSachPN.View
             this.btnHangHoa.Location = new System.Drawing.Point(303, 14);
             this.btnHangHoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHangHoa.Name = "btnHangHoa";
-            this.btnHangHoa.Size = new System.Drawing.Size(230, 67);
+            this.btnHangHoa.Size = new System.Drawing.Size(230, 46);
             this.btnHangHoa.TabIndex = 3;
             this.btnHangHoa.Text = "HÀNG HÓA";
             this.btnHangHoa.UseVisualStyleBackColor = true;
@@ -61,10 +62,10 @@ namespace QuanLyNhaSachPN.View
             // btnPhieuNhap
             // 
             this.btnPhieuNhap.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPhieuNhap.Location = new System.Drawing.Point(17, 14);
+            this.btnPhieuNhap.Location = new System.Drawing.Point(13, 10);
             this.btnPhieuNhap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPhieuNhap.Name = "btnPhieuNhap";
-            this.btnPhieuNhap.Size = new System.Drawing.Size(230, 67);
+            this.btnPhieuNhap.Size = new System.Drawing.Size(230, 46);
             this.btnPhieuNhap.TabIndex = 0;
             this.btnPhieuNhap.Text = "PHIẾU NHẬP";
             this.btnPhieuNhap.UseVisualStyleBackColor = true;
@@ -72,14 +73,15 @@ namespace QuanLyNhaSachPN.View
             // 
             // panelChildForm
             // 
-            this.panelChildForm.Location = new System.Drawing.Point(-1, 91);
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(0, 64);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1085, 482);
+            this.panelChildForm.Size = new System.Drawing.Size(1082, 509);
             this.panelChildForm.TabIndex = 1;
             // 
             // QLK
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 573);
             this.Controls.Add(this.panelChildForm);
