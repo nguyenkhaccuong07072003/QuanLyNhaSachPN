@@ -62,62 +62,83 @@ namespace QuanLyNhaSachPN.View
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (nbrSoLuong.Value == 0)
+            try
             {
-                MessageBox.Show("Vui lòng nhập đủ thông tin");
-            }
-            else
-            {
-                string query = string.Format("insert into CHITIETPHIEUNHAP values(N'{0}',N'{1}',N'{2}',N'{3}')"
-                , txtMaPN.Text, cbMaHang.SelectedValue, nbrSoLuong.Value, txtGiaNhap.Text);
-                bool result = con.ThucThi(query);
-                if (result)
+                if (nbrSoLuong.Value == 0)
                 {
-                    MessageBox.Show("Thêm thành công");
-                    btnReset.PerformClick();
+                    MessageBox.Show("Vui lòng nhập đủ thông tin");
                 }
                 else
                 {
-                    MessageBox.Show("Thêm thất bại");
+                    string query = string.Format("insert into CHITIETPHIEUNHAP values(N'{0}',N'{1}',N'{2}',N'{3}')"
+                    , txtMaPN.Text, cbMaHang.SelectedValue, nbrSoLuong.Value, txtGiaNhap.Text);
+                    bool result = con.ThucThi(query);
+                    if (result)
+                    {
+                        MessageBox.Show("Thêm thành công");
+                        btnReset.PerformClick();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm thất bại");
+                    }
                 }
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            string query = string.Format("update CHITIETPHIEUNHAP set MAHANG = N'{1}', SOLUONG=N'{2}', GIANHAP = N'{3}' where MAPHIEUNHAP=N'{0}' and MAHANG = '{1}'"
-            , txtMaPN.Text, cbMaHang.SelectedValue, nbrSoLuong.Value, txtGiaNhap.Text);
-
-            DataSet ds = con.LayDuLieu(query);
-            bool kt = con.ThucThi(query);
-            if (kt == true)
+            try
             {
-                MessageBox.Show("Sửa thành công");
-                btnReset.PerformClick();
+                string query = string.Format("update CHITIETPHIEUNHAP set MAHANG = N'{1}', SOLUONG=N'{2}', GIANHAP = N'{3}' where MAPHIEUNHAP=N'{0}' and MAHANG = '{1}'"
+                , txtMaPN.Text, cbMaHang.SelectedValue, nbrSoLuong.Value, txtGiaNhap.Text);
 
+                DataSet ds = con.LayDuLieu(query);
+                bool kt = con.ThucThi(query);
+                if (kt == true)
+                {
+                    MessageBox.Show("Sửa thành công");
+                    btnReset.PerformClick();
+
+                }
+                else
+                {
+                    MessageBox.Show("Sửa thất bại");
+                }
             }
-            else
+            catch(Exception)
             {
-                MessageBox.Show("Sửa thất bại");
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            string query = string.Format("Delete CHITIETPHIEUNHAP where MAHANG = N'{0}'", cbMaHang.SelectedValue);
-            DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa?", "Xác nhận xóa", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            try
             {
-                bool kt = con.ThucThi(query);
-                if (kt)
+                string query = string.Format("Delete CHITIETPHIEUNHAP where MAHANG = N'{0}'", cbMaHang.SelectedValue);
+                DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa?", "Xác nhận xóa", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Xóa thành công");
-                    btnReset.PerformClick();
+                    bool kt = con.ThucThi(query);
+                    if (kt)
+                    {
+                        MessageBox.Show("Xóa thành công");
+                        btnReset.PerformClick();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Xóa thất bại");
-                }
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
@@ -155,18 +176,25 @@ namespace QuanLyNhaSachPN.View
 
         private void dgvCTPN_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int r = e.RowIndex;
-            if (r >= 0)
+            try
             {
-                txtMaPN.Enabled = false;
-                btnThem.Enabled = false;
-                btnXoa.Enabled = true;
-                btnSua.Enabled = true;
+                int r = e.RowIndex;
+                if (r >= 0)
+                {
+                    txtMaPN.Enabled = false;
+                    btnThem.Enabled = false;
+                    btnXoa.Enabled = true;
+                    btnSua.Enabled = true;
 
-                txtMaPN.Text = dgvCTPN.Rows[r].Cells["MAPHIEUNHAP"].Value.ToString();
-                cbMaHang.SelectedValue = dgvCTPN.Rows[r].Cells["MAHANG"].Value.ToString();
-                nbrSoLuong.Value = Decimal.Parse(dgvCTPN.Rows[r].Cells["SOLUONG"].Value.ToString());
-                txtGiaNhap.Text = dgvCTPN.Rows[r].Cells["GIANHAP"].Value.ToString();
+                    txtMaPN.Text = dgvCTPN.Rows[r].Cells["MAPHIEUNHAP"].Value.ToString();
+                    cbMaHang.SelectedValue = dgvCTPN.Rows[r].Cells["MAHANG"].Value.ToString();
+                    nbrSoLuong.Value = Decimal.Parse(dgvCTPN.Rows[r].Cells["SOLUONG"].Value.ToString());
+                    txtGiaNhap.Text = dgvCTPN.Rows[r].Cells["GIANHAP"].Value.ToString();
+                }
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 

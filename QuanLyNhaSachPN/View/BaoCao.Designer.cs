@@ -72,7 +72,7 @@ namespace QuanLyNhaSachPN
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 74);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1081, 174);
+            this.panel2.Size = new System.Drawing.Size(1081, 287);
             this.panel2.TabIndex = 4;
             // 
             // btnLamMoi
@@ -81,7 +81,7 @@ namespace QuanLyNhaSachPN
             this.btnLamMoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLamMoi.FlatAppearance.BorderSize = 0;
             this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLamMoi.Location = new System.Drawing.Point(947, 103);
+            this.btnLamMoi.Location = new System.Drawing.Point(728, 126);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(58, 53);
             this.btnLamMoi.TabIndex = 3;
@@ -94,7 +94,7 @@ namespace QuanLyNhaSachPN
             this.btnTao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnTao.FlatAppearance.BorderSize = 0;
             this.btnTao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTao.Location = new System.Drawing.Point(820, 103);
+            this.btnTao.Location = new System.Drawing.Point(637, 126);
             this.btnTao.Name = "btnTao";
             this.btnTao.Size = new System.Drawing.Size(56, 53);
             this.btnTao.TabIndex = 2;
@@ -147,9 +147,9 @@ namespace QuanLyNhaSachPN
             // 
             this.groupBox2.Controls.Add(this.dgvThongKe);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox2.Location = new System.Drawing.Point(0, 248);
+            this.groupBox2.Location = new System.Drawing.Point(0, 361);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1081, 458);
+            this.groupBox2.Size = new System.Drawing.Size(1081, 345);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
@@ -161,7 +161,7 @@ namespace QuanLyNhaSachPN
             this.dgvThongKe.Name = "dgvThongKe";
             this.dgvThongKe.RowHeadersWidth = 51;
             this.dgvThongKe.RowTemplate.Height = 24;
-            this.dgvThongKe.Size = new System.Drawing.Size(1075, 429);
+            this.dgvThongKe.Size = new System.Drawing.Size(1075, 316);
             this.dgvThongKe.TabIndex = 0;
             // 
             // groupBox1

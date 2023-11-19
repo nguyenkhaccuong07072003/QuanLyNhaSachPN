@@ -46,69 +46,90 @@ namespace QuanLyNhaSachPN
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string checkMANCC = string.Format("select * from NHACUNGCAP where MANCC = N'{0}'"
-                , txtMaNCC.Text);
-            DataSet ds = kn.LayDuLieu(checkMANCC);
-            if (ds.Tables[0].Rows.Count == 0)
+            try
             {
-                string query = string.Format("insert into NHACUNGCAP values(N'{0}',N'{1}',N'{2}',N'{3}')"
-                , txtMaNCC.Text,txtTenNCC.Text,txtDiaChi.Text,txtSDT.Text);
-                bool result = kn.ThucThi(query);
-                if (result)
+                string checkMANCC = string.Format("select * from NHACUNGCAP where MANCC = N'{0}'"
+                    , txtMaNCC.Text);
+                DataSet ds = kn.LayDuLieu(checkMANCC);
+                if (ds.Tables[0].Rows.Count == 0)
                 {
-                    MessageBox.Show("Thêm thành công");
-                    btnReset.PerformClick();
+                    string query = string.Format("insert into NHACUNGCAP values(N'{0}',N'{1}',N'{2}',N'{3}')"
+                    , txtMaNCC.Text, txtTenNCC.Text, txtDiaChi.Text, txtSDT.Text);
+                    bool result = kn.ThucThi(query);
+                    if (result)
+                    {
+                        MessageBox.Show("Thêm thành công");
+                        btnReset.PerformClick();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm thất bại");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Thêm thất bại");
+                    MessageBox.Show("Mã nhà cung cấp đã tồn tại!");
                 }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("Mã nhà cung cấp đã tồn tại!");
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            string query = string.Format("update NHACUNGCAP set TENNCC=N'{1}', DIACHI=N'{2}', SDT=N'{3}' where MANCC=N'{0}'",
-               txtMaNCC.Text,
-                txtTenNCC.Text,
-                txtDiaChi.Text,
-                txtSDT.Text
-                    );
-            DataSet ds = kn.LayDuLieu(query);
-            bool kt = kn.ThucThi(query);
-            if (kt == true)
+            try
             {
-                MessageBox.Show("Sửa thành công");
-                btnReset.PerformClick();
+                string query = string.Format("update NHACUNGCAP set TENNCC=N'{1}', DIACHI=N'{2}', SDT=N'{3}' where MANCC=N'{0}'",
+                   txtMaNCC.Text,
+                    txtTenNCC.Text,
+                    txtDiaChi.Text,
+                    txtSDT.Text
+                        );
+                DataSet ds = kn.LayDuLieu(query);
+                bool kt = kn.ThucThi(query);
+                if (kt == true)
+                {
+                    MessageBox.Show("Sửa thành công");
+                    btnReset.PerformClick();
+                }
+                else
+                {
+                    MessageBox.Show("Sửa thất bại");
+                }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("Sửa thất bại");
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            string query = string.Format("DELETE FROM NHACUNGCAP WHERE MANCC=N'{0}'", txtMaNCC.Text);
-            DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa?", "Xác nhận xóa", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            try
             {
-                DataSet ds = kn.LayDuLieu(query);
-                bool kt = kn.ThucThi(query);
+                string query = string.Format("DELETE FROM NHACUNGCAP WHERE MANCC=N'{0}'", txtMaNCC.Text);
+                DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa?", "Xác nhận xóa", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    DataSet ds = kn.LayDuLieu(query);
+                    bool kt = kn.ThucThi(query);
 
-                if (kt == true)
-                {
-                    MessageBox.Show("Xóa thành công");
-                    btnReset.PerformClick();
+                    if (kt == true)
+                    {
+                        MessageBox.Show("Xóa thành công");
+                        btnReset.PerformClick();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Xóa thất bại");
-                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
@@ -137,29 +158,36 @@ namespace QuanLyNhaSachPN
                 }
                 else
                 {
-                    MessageBox.Show("No data found.");
+                    MessageBox.Show("Không tìm thấy dữ liệu");
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("An error occurred: " + ex.Message);
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
         private void dgvNCC_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int r = e.RowIndex;
-            if (r >= 0)
+            try
             {
-                txtMaNCC.Enabled = false;
-                btnThem.Enabled = false;
-                btnXoa.Enabled = true;
-                btnSua.Enabled = true;
+                int r = e.RowIndex;
+                if (r >= 0)
+                {
+                    txtMaNCC.Enabled = false;
+                    btnThem.Enabled = false;
+                    btnXoa.Enabled = true;
+                    btnSua.Enabled = true;
 
-                txtMaNCC.Text = dgvNCC.Rows[r].Cells["MANCC"].Value.ToString();
-                txtTenNCC.Text = dgvNCC.Rows[r].Cells["TENNCC"].Value.ToString();
-                txtSDT.Text = dgvNCC.Rows[r].Cells["SDT"].Value.ToString();
-                txtDiaChi.Text = dgvNCC.Rows[r].Cells["DIACHI"].Value.ToString();
+                    txtMaNCC.Text = dgvNCC.Rows[r].Cells["MANCC"].Value.ToString();
+                    txtTenNCC.Text = dgvNCC.Rows[r].Cells["TENNCC"].Value.ToString();
+                    txtSDT.Text = dgvNCC.Rows[r].Cells["SDT"].Value.ToString();
+                    txtDiaChi.Text = dgvNCC.Rows[r].Cells["DIACHI"].Value.ToString();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 

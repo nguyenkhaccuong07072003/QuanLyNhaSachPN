@@ -48,71 +48,91 @@ namespace QuanLyNhaSachPN.View
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string checkMAHANG = string.Format("select * from HANG where MAHANG = N'{0}'"
-                , txtMahang.Text);
-            DataSet ds = kn.LayDuLieu(checkMAHANG);
-            if (ds.Tables[0].Rows.Count == 0)
+            try
             {
-                string query = string.Format("insert into HANG values(N'{0}',N'{1}',N'{2}',N'{3}',N'{4}')"
-                , txtMahang.Text, txtTenhang.Text, nbrSoLuong.Value, txtDVT.Text,txtDongia.Text);
-                bool result = kn.ThucThi(query);
-                if (result)
+                string checkMAHANG = string.Format("select * from HANG where MAHANG = N'{0}'"
+                    , txtMahang.Text);
+                DataSet ds = kn.LayDuLieu(checkMAHANG);
+                if (ds.Tables[0].Rows.Count == 0)
                 {
-                    MessageBox.Show("Thêm thành công");
-                    btnReset.PerformClick();
+                    string query = string.Format("insert into HANG values(N'{0}',N'{1}',N'{2}',N'{3}',N'{4}')"
+                    , txtMahang.Text, txtTenhang.Text, nbrSoLuong.Value, txtDVT.Text, txtDongia.Text);
+                    bool result = kn.ThucThi(query);
+                    if (result)
+                    {
+                        MessageBox.Show("Thêm thành công");
+                        btnReset.PerformClick();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm thất bại");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Thêm thất bại");
+                    MessageBox.Show("Mã nhà cung cấp đã tồn tại!");
                 }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("Mã nhà cung cấp đã tồn tại!");
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            string query = string.Format("update HANG set " +
-                "TENHANG=N'{1}', SOLUONG=N'{2}', DONVITINH=N'{3}', DONGIA=N'{4}' where MAHANG=N'{0}'",
-                txtMahang.Text,
-                txtTenhang.Text,
-                nbrSoLuong.Value,
-                txtDVT.Text,
-                txtDongia.Text
-                );
-            //DataSet ds = kn.LayDuLieu(query);
-            bool kt = kn.ThucThi(query);
-            if (kt == true)
+            try
             {
-                MessageBox.Show("Sửa thành công");
-                btnReset.PerformClick();
+                string query = string.Format("update HANG set " +
+                    "TENHANG=N'{1}', SOLUONG=N'{2}', DONVITINH=N'{3}', DONGIA=N'{4}' where MAHANG=N'{0}'",
+                    txtMahang.Text,
+                    txtTenhang.Text,
+                    nbrSoLuong.Value,
+                    txtDVT.Text,
+                    txtDongia.Text
+                    );
+                bool kt = kn.ThucThi(query);
+                if (kt == true)
+                {
+                    MessageBox.Show("Sửa thành công");
+                    btnReset.PerformClick();
+                }
+                else
+                {
+                    MessageBox.Show("Sửa thất bại");
+                }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("Sửa thất bại");
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            string query = string.Format("Delete HANG where MAHANG=N'{0}'", txtMahang.Text);
-            DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa?", "Xác nhận xóa", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            try
             {
-                //DataSet ds = kn.LayDuLieu(query);
-                bool kt = kn.ThucThi(query);
+                string query = string.Format("Delete HANG where MAHANG=N'{0}'", txtMahang.Text);
+                DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa?", "Xác nhận xóa", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    //DataSet ds = kn.LayDuLieu(query);
+                    bool kt = kn.ThucThi(query);
 
-                if (kt)
-                {
-                    MessageBox.Show("Xóa thành công");
-                    btnReset.PerformClick();
+                    if (kt)
+                    {
+                        MessageBox.Show("Xóa thành công");
+                        btnReset.PerformClick();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Xóa thất bại");
-                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
@@ -142,30 +162,37 @@ namespace QuanLyNhaSachPN.View
                 }
                 else
                 {
-                    MessageBox.Show("No data found.");
+                    MessageBox.Show("Không tìm thấy dữ liệu");
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("An error occurred: " + ex.Message);
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
         private void dgvQLhang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int r = e.RowIndex;
-            if (r >= 0)
+            try
             {
-                txtMahang.Enabled = false;
-                btnThem.Enabled = false;
-                btnXoa.Enabled = true;
-                btnSua.Enabled = true;
+                int r = e.RowIndex;
+                if (r >= 0)
+                {
+                    txtMahang.Enabled = false;
+                    btnThem.Enabled = false;
+                    btnXoa.Enabled = true;
+                    btnSua.Enabled = true;
 
-                txtMahang.Text = dgvQLhang.Rows[r].Cells["MAHANG"].Value.ToString();
-                txtTenhang.Text = dgvQLhang.Rows[r].Cells["TENHANG"].Value.ToString();
-                txtDVT.Text = dgvQLhang.Rows[r].Cells["DONVITINH"].Value.ToString();
-                nbrSoLuong.Value = Decimal.Parse(dgvQLhang.Rows[r].Cells["SOLUONG"].Value.ToString());
-                txtDongia.Text = dgvQLhang.Rows[r].Cells["DONGIA"].Value.ToString();
+                    txtMahang.Text = dgvQLhang.Rows[r].Cells["MAHANG"].Value.ToString();
+                    txtTenhang.Text = dgvQLhang.Rows[r].Cells["TENHANG"].Value.ToString();
+                    txtDVT.Text = dgvQLhang.Rows[r].Cells["DONVITINH"].Value.ToString();
+                    nbrSoLuong.Value = Decimal.Parse(dgvQLhang.Rows[r].Cells["SOLUONG"].Value.ToString());
+                    txtDongia.Text = dgvQLhang.Rows[r].Cells["DONGIA"].Value.ToString();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 

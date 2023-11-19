@@ -21,38 +21,45 @@ namespace QuanLyNhaSachPN
         Connect con = new Connect();
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            Taikhoan = txtTaiKhoan.Text;
-            string query = string.Format("select * from NguoiDung where taikhoan = '{0}' and matkhau = '{1}'"
-                , txtTaiKhoan.Text, txtMatKhau.Text);
-            DataSet ds = con.LayDuLieu(query);
-            if(txtTaiKhoan.Text == "" && txtMatKhau.Text == "")
+            try
             {
-                MessageBox.Show("Vui lòng nhập tài khoản và mật khẩu!");
-            }
-            else
-            {
-                if (txtTaiKhoan.Text == "")
+                Taikhoan = txtTaiKhoan.Text;
+                string query = string.Format("select * from NguoiDung where taikhoan = '{0}' and matkhau = '{1}'"
+                    , txtTaiKhoan.Text, txtMatKhau.Text);
+                DataSet ds = con.LayDuLieu(query);
+                if (txtTaiKhoan.Text == "" && txtMatKhau.Text == "")
                 {
-                    MessageBox.Show("Chưa nhập tài khoản!");
-                }
-                else if (txtMatKhau.Text == "")
-                {
-                    MessageBox.Show("Chưa nhập mật khẩu!");
+                    MessageBox.Show("Vui lòng nhập tài khoản và mật khẩu!");
                 }
                 else
                 {
-                    if (ds.Tables[0].Rows.Count == 1)
+                    if (txtTaiKhoan.Text == "")
                     {
-                        //MessageBox.Show("Đăng nhập thành công");
-                        TrangChu frm = new TrangChu();
-                        frm.Show();
-                        this.Hide();
+                        MessageBox.Show("Chưa nhập tài khoản!");
+                    }
+                    else if (txtMatKhau.Text == "")
+                    {
+                        MessageBox.Show("Chưa nhập mật khẩu!");
                     }
                     else
                     {
-                        MessageBox.Show("Tài khoản và mật khẩu chưa chính xác");
+                        if (ds.Tables[0].Rows.Count == 1)
+                        {
+                            //MessageBox.Show("Đăng nhập thành công");
+                            TrangChu frm = new TrangChu();
+                            frm.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Tài khoản và mật khẩu chưa chính xác");
+                        }
                     }
                 }
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
 
         }

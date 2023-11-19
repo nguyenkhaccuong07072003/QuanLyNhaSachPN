@@ -67,67 +67,88 @@ namespace QuanLyNhaSachPN.View
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (nbrSoLuong.Value == 0)
+            try
             {
-                MessageBox.Show("Vui lòng nhập đủ thông tin");
-            }
-            else
-            {
-                string query = string.Format("insert into CHITIETHOADON values(N'{0}',N'{1}',N'{2}',N'{3}')"
-                , maHD, cbMahang.SelectedValue, nbrSoLuong.Value, txtGiatien.Text);
-                bool result = con.ThucThi(query);
-                if (result)
+                if (nbrSoLuong.Value == 0)
                 {
-                    MessageBox.Show("Thêm thành công");
-                    btnReset.PerformClick();
+                    MessageBox.Show("Vui lòng nhập đủ thông tin");
                 }
                 else
                 {
-                    MessageBox.Show("Thêm thất bại");
+                    string query = string.Format("insert into CHITIETHOADON values(N'{0}',N'{1}',N'{2}',N'{3}')"
+                    , maHD, cbMahang.SelectedValue, nbrSoLuong.Value, txtGiatien.Text);
+                    bool result = con.ThucThi(query);
+                    if (result)
+                    {
+                        MessageBox.Show("Thêm thành công");
+                        btnReset.PerformClick();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm thất bại");
+                    }
                 }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            string query = string.Format("update CHITIETHOADON set " +
-                "MAHANG = N'{1}', SOLUONG=N'{2}', GIATIEN = N'{3}' where MAHD=N'{0}' and MAHANG = '{1}'",
-                txtMahd.Text,
-                cbMahang.SelectedValue,
-                nbrSoLuong.Value,
-                txtGiatien.Text
-                );
-
-            DataSet ds = con.LayDuLieu(query);
-            bool kt = con.ThucThi(query);
-            if (kt == true)
+            try
             {
-                MessageBox.Show("Sửa thành công");
-                btnReset.PerformClick();
+                string query = string.Format("update CHITIETHOADON set " +
+                    "MAHANG = N'{1}', SOLUONG=N'{2}', GIATIEN = N'{3}' where MAHD=N'{0}' and MAHANG = '{1}'",
+                    txtMahd.Text,
+                    cbMahang.SelectedValue,
+                    nbrSoLuong.Value,
+                    txtGiatien.Text
+                    );
 
+                DataSet ds = con.LayDuLieu(query);
+                bool kt = con.ThucThi(query);
+                if (kt == true)
+                {
+                    MessageBox.Show("Sửa thành công");
+                    btnReset.PerformClick();
+
+                }
+                else
+                {
+                    MessageBox.Show("Sửa thất bại");
+                }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("Sửa thất bại");
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            string query = string.Format("Delete CHITIETHOADON where MAHANG = N'{0}'", cbMahang.SelectedValue);
-            DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa?", "Xác nhận xóa", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            try
             {
-                bool kt = con.ThucThi(query);
-                if (kt)
+                string query = string.Format("Delete CHITIETHOADON where MAHANG = N'{0}'", cbMahang.SelectedValue);
+                DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa?", "Xác nhận xóa", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Xóa thành công");
-                    btnReset.PerformClick();
+                    bool kt = con.ThucThi(query);
+                    if (kt)
+                    {
+                        MessageBox.Show("Xóa thành công");
+                        btnReset.PerformClick();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Xóa thất bại");
-                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
@@ -155,29 +176,36 @@ namespace QuanLyNhaSachPN.View
                 }
                 else
                 {
-                    MessageBox.Show("No data found.");
+                    MessageBox.Show("Không tìm thấy dữ liệu");
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("An error occurred: " + ex.Message);
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
         private void dgvCTHD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int r = e.RowIndex;
-            if (r >= 0)
+            try
             {
-                txtMahd.Enabled = false;
-                btnThem.Enabled = false;
-                btnXoa.Enabled = true;
-                btnSua.Enabled = true;
+                int r = e.RowIndex;
+                if (r >= 0)
+                {
+                    txtMahd.Enabled = false;
+                    btnThem.Enabled = false;
+                    btnXoa.Enabled = true;
+                    btnSua.Enabled = true;
 
-                txtMahd.Text = dgvCTHD.Rows[r].Cells["MAHD"].Value.ToString();
-                cbMahang.SelectedValue = dgvCTHD.Rows[r].Cells["MAHANG"].Value.ToString();
-                nbrSoLuong.Value = Decimal.Parse(dgvCTHD.Rows[r].Cells["SOLUONG"].Value.ToString());
-                txtGiatien.Text = dgvCTHD.Rows[r].Cells["GIATIEN"].Value.ToString();
+                    txtMahd.Text = dgvCTHD.Rows[r].Cells["MAHD"].Value.ToString();
+                    cbMahang.SelectedValue = dgvCTHD.Rows[r].Cells["MAHANG"].Value.ToString();
+                    nbrSoLuong.Value = Decimal.Parse(dgvCTHD.Rows[r].Cells["SOLUONG"].Value.ToString());
+                    txtGiatien.Text = dgvCTHD.Rows[r].Cells["GIATIEN"].Value.ToString();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
     

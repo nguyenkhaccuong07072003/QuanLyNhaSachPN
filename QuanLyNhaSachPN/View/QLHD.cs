@@ -60,72 +60,92 @@ namespace QuanLyNhaSachPN.View
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            
-            string checkMAHD = string.Format("select * from HOADON where MAHD= N'{0}'"
-                         , txtMaHD.Text);
-            DataSet ds = con.LayDuLieu(checkMAHD);
-            if (ds.Tables[0].Rows.Count == 0)
+            try
             {
-                string query = string.Format("insert into HOADON values(N'{0}',N'{1}',N'{2}',N'{3}')"
-                , txtMaHD.Text, cbMaNV.SelectedValue, dtpNglap.Value.ToString("yyyy/MM/dd"), txtThanhtien.Text);
-                bool result = con.ThucThi(query);
-                if (result)
+                string checkMAHD = string.Format("select * from HOADON where MAHD= N'{0}'"
+                             , txtMaHD.Text);
+                DataSet ds = con.LayDuLieu(checkMAHD);
+                if (ds.Tables[0].Rows.Count == 0)
                 {
-                    MessageBox.Show("Thêm thành công");
-                    btnReset.PerformClick();
+                    string query = string.Format("insert into HOADON values(N'{0}',N'{1}',N'{2}',N'{3}')"
+                    , txtMaHD.Text, cbMaNV.SelectedValue, dtpNglap.Value.ToString("yyyy/MM/dd"), txtThanhtien.Text);
+                    bool result = con.ThucThi(query);
+                    if (result)
+                    {
+                        MessageBox.Show("Thêm thành công");
+                        btnReset.PerformClick();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm thất bại");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Thêm thất bại");
+                    MessageBox.Show("Mã hóa đơn đã tồn tại!");
                 }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("Mã hóa đơn đã tồn tại!");
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            string query = string.Format("update HOADON set " +
-                "MANV=N'{1}', NGAYLAP=N'{2}', THANHTIEN=N'{3}' where MAHD=N'{0}'",
-                txtMaHD.Text,
-                cbMaNV.SelectedValue,
-                dtpNglap.Value.ToString("yyyy/MM/dd"),
-                txtThanhtien.Text
-                );
-            bool kt = con.ThucThi(query);
-            if (kt == true)
+            try
             {
-                MessageBox.Show("Sửa thành công");
-                btnReset.PerformClick();
+                string query = string.Format("update HOADON set " +
+                    "MANV=N'{1}', NGAYLAP=N'{2}', THANHTIEN=N'{3}' where MAHD=N'{0}'",
+                    txtMaHD.Text,
+                    cbMaNV.SelectedValue,
+                    dtpNglap.Value.ToString("yyyy/MM/dd"),
+                    txtThanhtien.Text
+                    );
+                bool kt = con.ThucThi(query);
+                if (kt == true)
+                {
+                    MessageBox.Show("Sửa thành công");
+                    btnReset.PerformClick();
+                }
+                else
+                {
+                    MessageBox.Show("Sửa thất bại");
+                }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("Sửa thất bại");
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            string query = string.Format("if exists (select count(*) from CHITIETHOADON where MAHD = '{0}' group by MAHD having count(*) > 0) " +
-                " begin " +
-                    "Delete CHITIETHOADON where MAHD = '{0}' " +
-                    "Delete HOADON where MAHD = '{0}' " +
-                " end ",txtMaHD.Text);
-            DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa?", "Xác nhận xóa", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            try
             {
-                bool kt = con.ThucThi(query);
-                if (kt)
+                string query = string.Format("if exists (select count(*) from CHITIETHOADON where MAHD = '{0}' group by MAHD having count(*) > 0) " +
+                    " begin " +
+                        "Delete CHITIETHOADON where MAHD = '{0}' " +
+                        "Delete HOADON where MAHD = '{0}' " +
+                    " end ", txtMaHD.Text);
+                DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa?", "Xác nhận xóa", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Xóa thành công");
-                    btnReset.PerformClick();
+                    bool kt = con.ThucThi(query);
+                    if (kt)
+                    {
+                        MessageBox.Show("Xóa thành công");
+                        btnReset.PerformClick();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Xóa thất bại");
-                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
@@ -154,29 +174,36 @@ namespace QuanLyNhaSachPN.View
                 }
                 else
                 {
-                    MessageBox.Show("No data found.");
+                    MessageBox.Show("Không tìm thấy dữ liệu");
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("An error occurred: " + ex.Message);
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
         private void dgvHoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int r = e.RowIndex;
-            if (r >= 0)
+            try
             {
-                txtMaHD.Enabled = false;
-                btnThem.Enabled = false;
-                btnXoa.Enabled = true;
-                btnSua.Enabled = true;
+                int r = e.RowIndex;
+                if (r >= 0)
+                {
+                    txtMaHD.Enabled = false;
+                    btnThem.Enabled = false;
+                    btnXoa.Enabled = true;
+                    btnSua.Enabled = true;
 
-                txtMaHD.Text = dgvHoaDon.Rows[r].Cells["MAHD"].Value.ToString();
-                cbMaNV.SelectedValue = dgvHoaDon.Rows[r].Cells["MANV"].Value.ToString();
-                dtpNglap.Text = dgvHoaDon.Rows[r].Cells["NGAYLAP"].Value.ToString();
-                txtThanhtien.Text = dgvHoaDon.Rows[r].Cells["THANHTIEN"].Value.ToString();
+                    txtMaHD.Text = dgvHoaDon.Rows[r].Cells["MAHD"].Value.ToString();
+                    cbMaNV.SelectedValue = dgvHoaDon.Rows[r].Cells["MANV"].Value.ToString();
+                    dtpNglap.Text = dgvHoaDon.Rows[r].Cells["NGAYLAP"].Value.ToString();
+                    txtThanhtien.Text = dgvHoaDon.Rows[r].Cells["THANHTIEN"].Value.ToString();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
         private void dgvHoaDon_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
