@@ -58,7 +58,7 @@ namespace QuanLyNhaSachPN
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(940, 525);
+            this.panel1.Size = new System.Drawing.Size(1081, 706);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -72,7 +72,7 @@ namespace QuanLyNhaSachPN
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 74);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(940, 99);
+            this.panel2.Size = new System.Drawing.Size(1081, 174);
             this.panel2.TabIndex = 4;
             // 
             // btnLamMoi
@@ -81,7 +81,7 @@ namespace QuanLyNhaSachPN
             this.btnLamMoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLamMoi.FlatAppearance.BorderSize = 0;
             this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLamMoi.Location = new System.Drawing.Point(843, 12);
+            this.btnLamMoi.Location = new System.Drawing.Point(947, 103);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(58, 53);
             this.btnLamMoi.TabIndex = 3;
@@ -94,7 +94,7 @@ namespace QuanLyNhaSachPN
             this.btnTao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnTao.FlatAppearance.BorderSize = 0;
             this.btnTao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTao.Location = new System.Drawing.Point(732, 12);
+            this.btnTao.Location = new System.Drawing.Point(820, 103);
             this.btnTao.Name = "btnTao";
             this.btnTao.Size = new System.Drawing.Size(56, 53);
             this.btnTao.TabIndex = 2;
@@ -106,7 +106,7 @@ namespace QuanLyNhaSachPN
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(39, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 19);
+            this.label2.Size = new System.Drawing.Size(58, 23);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tháng";
             // 
@@ -119,7 +119,7 @@ namespace QuanLyNhaSachPN
             0,
             0});
             this.nmrNam.Name = "nmrNam";
-            this.nmrNam.Size = new System.Drawing.Size(204, 26);
+            this.nmrNam.Size = new System.Drawing.Size(204, 30);
             this.nmrNam.TabIndex = 1;
             // 
             // label3
@@ -127,7 +127,7 @@ namespace QuanLyNhaSachPN
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(393, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 19);
+            this.label3.Size = new System.Drawing.Size(47, 23);
             this.label3.TabIndex = 2;
             this.label3.Text = "Năm";
             // 
@@ -140,16 +140,16 @@ namespace QuanLyNhaSachPN
             0,
             0});
             this.nmrThang.Name = "nmrThang";
-            this.nmrThang.Size = new System.Drawing.Size(204, 26);
+            this.nmrThang.Size = new System.Drawing.Size(204, 30);
             this.nmrThang.TabIndex = 0;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvThongKe);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox2.Location = new System.Drawing.Point(0, 173);
+            this.groupBox2.Location = new System.Drawing.Point(0, 248);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(940, 352);
+            this.groupBox2.Size = new System.Drawing.Size(1081, 458);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
@@ -157,11 +157,11 @@ namespace QuanLyNhaSachPN
             // 
             this.dgvThongKe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThongKe.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvThongKe.Location = new System.Drawing.Point(3, 22);
+            this.dgvThongKe.Location = new System.Drawing.Point(3, 26);
             this.dgvThongKe.Name = "dgvThongKe";
             this.dgvThongKe.RowHeadersWidth = 51;
             this.dgvThongKe.RowTemplate.Height = 24;
-            this.dgvThongKe.Size = new System.Drawing.Size(934, 327);
+            this.dgvThongKe.Size = new System.Drawing.Size(1075, 429);
             this.dgvThongKe.TabIndex = 0;
             // 
             // groupBox1
@@ -170,7 +170,7 @@ namespace QuanLyNhaSachPN
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(940, 74);
+            this.groupBox1.Size = new System.Drawing.Size(1081, 74);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -178,18 +178,18 @@ namespace QuanLyNhaSachPN
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 22);
+            this.label1.Location = new System.Drawing.Point(3, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(934, 49);
+            this.label1.Size = new System.Drawing.Size(1075, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "THỐNG KÊ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // BaoCao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(940, 525);
+            this.ClientSize = new System.Drawing.Size(1081, 706);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);

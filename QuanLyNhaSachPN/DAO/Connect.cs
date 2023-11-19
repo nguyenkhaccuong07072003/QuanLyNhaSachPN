@@ -10,7 +10,7 @@ namespace QuanLyNhaSachPN.DAO
 {
     class Connect
     {
-        string constr = @"Data Source=LAPTOP-83TE1GTV\SQLEXPRESS;Initial Catalog=QLNSPN;Integrated Security=True";
+        string constr = @"Data Source=DESKTOP-2MC26TB\SQLEXPRESS;Initial Catalog=QLNSPN;Integrated Security=True";
         SqlConnection conn;
         public Connect()
         {

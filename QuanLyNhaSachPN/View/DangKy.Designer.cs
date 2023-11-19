@@ -64,9 +64,8 @@ namespace QuanLyNhaSachPN
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(300, 140);
+            this.label4.Size = new System.Drawing.Size(400, 172);
             this.label4.TabIndex = 10;
             this.label4.Text = "Uy Tín và Tiện Lợi";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -82,11 +81,11 @@ namespace QuanLyNhaSachPN
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(10, 2);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(13, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(323, 486);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(431, 598);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             // 
@@ -94,10 +93,9 @@ namespace QuanLyNhaSachPN
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(38, 401);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(51, 494);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(136, 19);
+            this.label5.Size = new System.Drawing.Size(170, 23);
             this.label5.TabIndex = 18;
             this.label5.Text = "Bạn đã có tài khoản?";
             // 
@@ -105,11 +103,11 @@ namespace QuanLyNhaSachPN
             // 
             this.groupBox5.Controls.Add(this.rbtnQuanLy);
             this.groupBox5.Controls.Add(this.rbtnNhanVien);
-            this.groupBox5.Location = new System.Drawing.Point(30, 271);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox5.Location = new System.Drawing.Point(40, 334);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox5.Size = new System.Drawing.Size(255, 61);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox5.Size = new System.Drawing.Size(340, 75);
             this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Chức Danh";
@@ -118,10 +116,10 @@ namespace QuanLyNhaSachPN
             // 
             this.rbtnQuanLy.AutoSize = true;
             this.rbtnQuanLy.Checked = true;
-            this.rbtnQuanLy.Location = new System.Drawing.Point(20, 25);
-            this.rbtnQuanLy.Margin = new System.Windows.Forms.Padding(2);
+            this.rbtnQuanLy.Location = new System.Drawing.Point(27, 31);
+            this.rbtnQuanLy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnQuanLy.Name = "rbtnQuanLy";
-            this.rbtnQuanLy.Size = new System.Drawing.Size(78, 23);
+            this.rbtnQuanLy.Size = new System.Drawing.Size(93, 27);
             this.rbtnQuanLy.TabIndex = 3;
             this.rbtnQuanLy.TabStop = true;
             this.rbtnQuanLy.Text = "Quan Ly";
@@ -130,10 +128,10 @@ namespace QuanLyNhaSachPN
             // rbtnNhanVien
             // 
             this.rbtnNhanVien.AutoSize = true;
-            this.rbtnNhanVien.Location = new System.Drawing.Point(140, 25);
-            this.rbtnNhanVien.Margin = new System.Windows.Forms.Padding(2);
+            this.rbtnNhanVien.Location = new System.Drawing.Point(187, 31);
+            this.rbtnNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbtnNhanVien.Name = "rbtnNhanVien";
-            this.rbtnNhanVien.Size = new System.Drawing.Size(91, 23);
+            this.rbtnNhanVien.Size = new System.Drawing.Size(112, 27);
             this.rbtnNhanVien.TabIndex = 4;
             this.rbtnNhanVien.Text = "Nhan Vien";
             this.rbtnNhanVien.UseVisualStyleBackColor = true;
@@ -142,11 +140,11 @@ namespace QuanLyNhaSachPN
             // 
             this.groupBox4.Controls.Add(this.panel3);
             this.groupBox4.Controls.Add(this.txtNhapLaiMatKhau);
-            this.groupBox4.Location = new System.Drawing.Point(28, 189);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Location = new System.Drawing.Point(37, 233);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(271, 64);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Size = new System.Drawing.Size(361, 79);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Nhập lại mật khẩu";
@@ -156,26 +154,27 @@ namespace QuanLyNhaSachPN
             this.panel3.BackgroundImage = global::QuanLyNhaSachPN.Properties.Resources.Vlademareous_Avant_Lock_256;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(2, 21);
+            this.panel3.Location = new System.Drawing.Point(3, 25);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(49, 41);
+            this.panel3.Size = new System.Drawing.Size(65, 52);
             this.panel3.TabIndex = 3;
             // 
             // txtNhapLaiMatKhau
             // 
-            this.txtNhapLaiMatKhau.Location = new System.Drawing.Point(56, 34);
-            this.txtNhapLaiMatKhau.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNhapLaiMatKhau.Location = new System.Drawing.Point(75, 42);
+            this.txtNhapLaiMatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNhapLaiMatKhau.Name = "txtNhapLaiMatKhau";
             this.txtNhapLaiMatKhau.PasswordChar = '*';
-            this.txtNhapLaiMatKhau.Size = new System.Drawing.Size(211, 26);
+            this.txtNhapLaiMatKhau.Size = new System.Drawing.Size(280, 30);
             this.txtNhapLaiMatKhau.TabIndex = 2;
             // 
             // btnDangKy
             // 
-            this.btnDangKy.Location = new System.Drawing.Point(30, 346);
-            this.btnDangKy.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDangKy.Location = new System.Drawing.Point(40, 426);
+            this.btnDangKy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDangKy.Name = "btnDangKy";
-            this.btnDangKy.Size = new System.Drawing.Size(255, 40);
+            this.btnDangKy.Size = new System.Drawing.Size(340, 49);
             this.btnDangKy.TabIndex = 5;
             this.btnDangKy.Text = "Đăng Kí";
             this.btnDangKy.UseVisualStyleBackColor = true;
@@ -183,10 +182,10 @@ namespace QuanLyNhaSachPN
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(30, 428);
-            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDangNhap.Location = new System.Drawing.Point(40, 527);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(255, 40);
+            this.btnDangNhap.Size = new System.Drawing.Size(340, 49);
             this.btnDangNhap.TabIndex = 6;
             this.btnDangNhap.Text = "Đăng Nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
@@ -196,11 +195,11 @@ namespace QuanLyNhaSachPN
             // 
             this.groupBox3.Controls.Add(this.panel2);
             this.groupBox3.Controls.Add(this.txtMatKhau);
-            this.groupBox3.Location = new System.Drawing.Point(28, 121);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Location = new System.Drawing.Point(37, 149);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(271, 64);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Size = new System.Drawing.Size(361, 79);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Nhập mật khẩu";
@@ -210,28 +209,28 @@ namespace QuanLyNhaSachPN
             this.panel2.BackgroundImage = global::QuanLyNhaSachPN.Properties.Resources.Vlademareous_Avant_Lock_256;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(2, 21);
+            this.panel2.Location = new System.Drawing.Point(3, 25);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(49, 41);
+            this.panel2.Size = new System.Drawing.Size(65, 52);
             this.panel2.TabIndex = 2;
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(56, 34);
-            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMatKhau.Location = new System.Drawing.Point(75, 42);
+            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
-            this.txtMatKhau.Size = new System.Drawing.Size(211, 26);
+            this.txtMatKhau.Size = new System.Drawing.Size(280, 30);
             this.txtMatKhau.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(2, 21);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(3, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(319, 21);
+            this.label3.Size = new System.Drawing.Size(425, 26);
             this.label3.TabIndex = 13;
             this.label3.Text = "ĐĂNG KÝ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -240,11 +239,11 @@ namespace QuanLyNhaSachPN
             // 
             this.groupBox2.Controls.Add(this.panel1);
             this.groupBox2.Controls.Add(this.txtTaiKhoan);
-            this.groupBox2.Location = new System.Drawing.Point(28, 53);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Location = new System.Drawing.Point(37, 65);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(271, 64);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(361, 79);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Nhập tài khoản";
@@ -254,46 +253,49 @@ namespace QuanLyNhaSachPN
             this.panel1.BackgroundImage = global::QuanLyNhaSachPN.Properties.Resources.Hopstarter_Soft_Scraps_User_Executive_Green_256;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(2, 21);
+            this.panel1.Location = new System.Drawing.Point(3, 25);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(49, 41);
+            this.panel1.Size = new System.Drawing.Size(65, 52);
             this.panel1.TabIndex = 1;
             // 
             // txtTaiKhoan
             // 
-            this.txtTaiKhoan.Location = new System.Drawing.Point(56, 34);
-            this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTaiKhoan.Location = new System.Drawing.Point(75, 42);
+            this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(211, 26);
+            this.txtTaiKhoan.Size = new System.Drawing.Size(280, 30);
             this.txtTaiKhoan.TabIndex = 0;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(338, 348);
+            this.panel4.Location = new System.Drawing.Point(451, 428);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(300, 140);
+            this.panel4.Size = new System.Drawing.Size(400, 172);
             this.panel4.TabIndex = 16;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(338, 16);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(451, 20);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(300, 318);
+            this.pictureBox1.Size = new System.Drawing.Size(400, 391);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
             // DangKy
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(646, 491);
+            this.ClientSize = new System.Drawing.Size(861, 604);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "DangKy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DangKy";
