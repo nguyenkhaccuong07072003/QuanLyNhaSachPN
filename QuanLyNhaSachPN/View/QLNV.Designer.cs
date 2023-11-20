@@ -355,12 +355,12 @@ namespace QuanLyNhaSachPN
             // dgvNhanVien
             // 
             this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNhanVien.Location = new System.Drawing.Point(0, 27);
+            this.dgvNhanVien.Location = new System.Drawing.Point(0, 13);
             this.dgvNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvNhanVien.Name = "dgvNhanVien";
             this.dgvNhanVien.RowHeadersWidth = 51;
             this.dgvNhanVien.RowTemplate.Height = 24;
-            this.dgvNhanVien.Size = new System.Drawing.Size(1078, 320);
+            this.dgvNhanVien.Size = new System.Drawing.Size(1078, 334);
             this.dgvNhanVien.TabIndex = 0;
             this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
             // 

@@ -13,6 +13,7 @@ namespace QuanLyNhaSachPN
     public partial class BaoCao : Form
     {
         Connect con = new Connect();
+
         public BaoCao()
         {
             InitializeComponent();
@@ -28,6 +29,7 @@ namespace QuanLyNhaSachPN
         {
             try
             {
+
                 if (nmrNam.Value == 0)
                 {
                     MessageBox.Show("Vui lòng nhập năm cần lập thống kê!");
@@ -40,16 +42,11 @@ namespace QuanLyNhaSachPN
                     }
                     else
                     {
-                        if (nmrThang.Value < 1 && nmrThang.Value > 12)
-                        {
-                            MessageBox.Show("Phải nhập tháng từ 1 đến 12");
-                        }
-                        else
-                        {
-                            DoanhThuThang();
-                        }
+                        DoanhThuThang();
                     }
                 }
+                Console.WriteLine(nmrNam.Value);
+                Console.WriteLine(nmrThang.Value);
             }
             catch(Exception)
             {
@@ -61,33 +58,50 @@ namespace QuanLyNhaSachPN
         {
             try
             {
-                string query = string.Format("WITH DoanhThuSanPham AS ( " +
-                    "SELECT HANG.MAHANG, HANG.TENHANG," +
-                        "SUM(CHITIETHOADON.SOLUONG * CHITIETHOADON.GIATIEN - CHITIETHOADON.SOLUONG * CHITIETPHIEUNHAP.GIANHAP) AS DOANH_THU_SAN_PHAM" +
-                        "FROM HANG" +
-                        "JOIN CHITIETHOADON ON HANG.MAHANG = CHITIETHOADON.MAHANG" +
-                        "JOIN CHITIETPHIEUNHAP ON HANG.MAHANG = CHITIETPHIEUNHAP.MAHANG" +
-                        "JOIN HOADON ON CHITIETHOADON.MAHD = HOADON.MAHD" +
-                        "WHERE YEAR(HOADON.NGAYLAP) = '{0}' AND MONTH(HOADON.NGAYLAP) = '{1}' " +
-                        "GROUP BY HANG.MAHANG, HANG.TENHANG)" +
-                    "SELECT HANG.MAHANG,HANG.TENHANG," +
-                        "SUM(CHITIETHOADON.SOLUONG)/2 AS TONG_SOLUONG, HANG.DONGIA," +
-                        "SUM(CHITIETHOADON.SOLUONG/2 * HANG.DONGIA) AS TONG_TIEN_THU_DUOC," +
-                        "SUM(CHITIETHOADON.SOLUONG/2 * CHITIETPHIEUNHAP.GIANHAP) AS TONG_TIEN_NHAP," +
-                        "(SUM(CHITIETHOADON.SOLUONG/2 * HANG.DONGIA) - SUM(CHITIETHOADON.SOLUONG/2 * CHITIETPHIEUNHAP.GIANHAP)) AS DOANH_THU_TUNG_SAN_PHAM" +
-                        "FROM HANG" +
-                        "JOIN CHITIETHOADON ON HANG.MAHANG = CHITIETHOADON.MAHANG" +
-                        "JOIN CHITIETPHIEUNHAP ON HANG.MAHANG = CHITIETPHIEUNHAP.MAHANG" +
-                        "JOIN HOADON ON CHITIETHOADON.MAHD = HOADON.MAHD" +
-                        "LEFT JOIN DoanhThuSanPham DTSP ON HANG.MAHANG = DTSP.MAHANG" +
-                        "WHERE YEAR(HOADON.NGAYLAP) = '{0}' AND MONTH(HOADON.NGAYLAP) = '{1}' " +
-                        "GROUP BY HANG.MAHANG, HANG.TENHANG, HANG.DONGIA;", nmrNam.Value, nmrThang.Value);
+                string query = string.Format(" WITH DoanhThuSanPham AS ( " +
+                    "     SELECT HANG.MAHANG, HANG.TENHANG, " +
+                    "         SUM(CHITIETHOADON.SOLUONG/2 * HANG.DONGIA - CHITIETHOADON.SOLUONG/2 * CHITIETPHIEUNHAP.GIANHAP) AS DOANH_THU_SAN_PHAM " +
+                    "     FROM HANG " +
+                    "     JOIN CHITIETHOADON ON HANG.MAHANG = CHITIETHOADON.MAHANG " +
+                    "     JOIN CHITIETPHIEUNHAP ON HANG.MAHANG = CHITIETPHIEUNHAP.MAHANG " +
+                    "     JOIN HOADON ON CHITIETHOADON.MAHD = HOADON.MAHD " +
+                    "     WHERE YEAR(HOADON.NGAYLAP) = '{0}' AND MONTH(HOADON.NGAYLAP) = '{1}' " +
+                    "     GROUP BY HANG.MAHANG, HANG.TENHANG) " +
+                    " SELECT HANG.MAHANG, HANG.TENHANG,   " +
+                    "     SUM(CHITIETHOADON.SOLUONG) / 2 AS TONG_SOLUONG, " +
+                    "     HANG.DONGIA, " +
+                    "     SUM(CHITIETHOADON.SOLUONG / 2 * HANG.DONGIA) AS TIEN_THU_DUOC, " +
+                    "     SUM(CHITIETHOADON.SOLUONG / 2 * CHITIETPHIEUNHAP.GIANHAP) AS TIEN_NHAP, " +
+                    "     (SUM(CHITIETHOADON.SOLUONG / 2 * HANG.DONGIA) - SUM(CHITIETHOADON.SOLUONG / 2 * CHITIETPHIEUNHAP.GIANHAP)) AS DOANH_THU_TUNG_SAN_PHAM " +
+                    " FROM HANG " +
+                    " JOIN CHITIETHOADON ON HANG.MAHANG = CHITIETHOADON.MAHANG " +
+                    " JOIN CHITIETPHIEUNHAP ON HANG.MAHANG = CHITIETPHIEUNHAP.MAHANG " +
+                    " JOIN HOADON ON CHITIETHOADON.MAHD = HOADON.MAHD " +
+                    " LEFT JOIN DoanhThuSanPham DTSP ON HANG.MAHANG = DTSP.MAHANG " +
+                    " WHERE YEAR(HOADON.NGAYLAP) = '{0}' AND MONTH(HOADON.NGAYLAP) = '{1}' " +
+                    " GROUP BY HANG.MAHANG, HANG.TENHANG, HANG.DONGIA " +
+                    " UNION ALL " +
+                    " SELECT 'Tong Doanh Thu' AS MAHANG,  " +
+                    "     NULL AS TENHANG, " +
+                    "     NULL AS TONG_SOLUONG,  " +
+                    "     NULL AS DONGIA, " +
+                    "     NULL AS TONG_TIEN_THU_DUOC, " +
+                    "     NULL AS TONG_TIEN_NHAP, " +
+                    "     SUM(DOANH_THU_SAN_PHAM) AS DOANH_THU_TUNG_SAN_PHAM " +
+                    " FROM DoanhThuSanPham; " , nmrNam.Value, nmrThang.Value);
                 DataSet ds = con.LayDuLieu(query);
-                dgvThongKe.DataSource = ds.Tables[0];
+                if (ds != null && ds.Tables[0].Rows.Count > 0)
+                {
+                    dgvThongKe.DataSource = ds.Tables[0];
+                }
+                else
+                {
+                    MessageBox.Show("Không có dữ liệu");
+                }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                MessageBox.Show("Đang Có Lỗi Xảy Ra");
+                MessageBox.Show("Đang Có Lỗi Xảy Ra" +e.ToString());
             }
 
         }
@@ -95,33 +109,50 @@ namespace QuanLyNhaSachPN
         {
             try
             {
-                string query = string.Format("WITH DoanhThuSanPham AS (" +
-                "SELECT HANG.MAHANG, HANG.TENHANG," +
-                    "SUM(CHITIETHOADON.SOLUONG * CHITIETHOADON.GIATIEN - CHITIETHOADON.SOLUONG * CHITIETPHIEUNHAP.GIANHAP) AS DOANH_THU_SAN_PHAM" +
-                    "FROM HANG" +
-                    "JOIN CHITIETHOADON ON HANG.MAHANG = CHITIETHOADON.MAHANG" +
-                    "JOIN CHITIETPHIEUNHAP ON HANG.MAHANG = CHITIETPHIEUNHAP.MAHANG" +
-                    "JOIN HOADON ON CHITIETHOADON.MAHD = HOADON.MAHD" +
-                    "WHERE YEAR(HOADON.NGAYLAP) = '{0}'  " +
-                    "GROUP BY HANG.MAHANG, HANG.TENHANG)" +
-                "SELECT HANG.MAHANG,HANG.TENHANG," +
-                    "SUM(CHITIETHOADON.SOLUONG)/2 AS TONG_SOLUONG, HANG.DONGIA," +
-                    "SUM(CHITIETHOADON.SOLUONG/2 * HANG.DONGIA) AS TONG_TIEN_THU_DUOC," +
-                    "SUM(CHITIETHOADON.SOLUONG/2 * CHITIETPHIEUNHAP.GIANHAP) AS TONG_TIEN_NHAP," +
-                    "(SUM(CHITIETHOADON.SOLUONG/2 * HANG.DONGIA) - SUM(CHITIETHOADON.SOLUONG/2 * CHITIETPHIEUNHAP.GIANHAP)) AS DOANH_THU_TUNG_SAN_PHAM" +
-                    "FROM HANG" +
-                    "JOIN CHITIETHOADON ON HANG.MAHANG = CHITIETHOADON.MAHANG" +
-                    "JOIN CHITIETPHIEUNHAP ON HANG.MAHANG = CHITIETPHIEUNHAP.MAHANG" +
-                    "JOIN HOADON ON CHITIETHOADON.MAHD = HOADON.MAHD" +
-                    "LEFT JOIN DoanhThuSanPham DTSP ON HANG.MAHANG = DTSP.MAHANG" +
-                    "WHERE YEAR(HOADON.NGAYLAP) = '{0}' " +
-                    "GROUP BY HANG.MAHANG, HANG.TENHANG, HANG.DONGIA;", nmrNam.Value);
+                string query = string.Format(" WITH DoanhThuSanPham AS ( " +
+                    "     SELECT HANG.MAHANG, HANG.TENHANG, " +
+                    "         SUM(CHITIETHOADON.SOLUONG/2 * HANG.DONGIA - CHITIETHOADON.SOLUONG/2 * CHITIETPHIEUNHAP.GIANHAP) AS DOANH_THU_SAN_PHAM " +
+                    "     FROM HANG " +
+                    "     JOIN CHITIETHOADON ON HANG.MAHANG = CHITIETHOADON.MAHANG " +
+                    "     JOIN CHITIETPHIEUNHAP ON HANG.MAHANG = CHITIETPHIEUNHAP.MAHANG " +
+                    "     JOIN HOADON ON CHITIETHOADON.MAHD = HOADON.MAHD " +
+                    "     WHERE YEAR(HOADON.NGAYLAP) = '{0}'  " +
+                    "     GROUP BY HANG.MAHANG, HANG.TENHANG) " +
+                    " SELECT HANG.MAHANG, HANG.TENHANG,   " +
+                    "     SUM(CHITIETHOADON.SOLUONG) / 2 AS TONG_SOLUONG, " +
+                    "     HANG.DONGIA, " +
+                    "     SUM(CHITIETHOADON.SOLUONG / 2 * HANG.DONGIA) AS TIEN_THU_DUOC, " +
+                    "     SUM(CHITIETHOADON.SOLUONG / 2 * CHITIETPHIEUNHAP.GIANHAP) AS TIEN_NHAP, " +
+                    "     (SUM(CHITIETHOADON.SOLUONG / 2 * HANG.DONGIA) - SUM(CHITIETHOADON.SOLUONG / 2 * CHITIETPHIEUNHAP.GIANHAP)) AS DOANH_THU_TUNG_SAN_PHAM " +
+                    " FROM HANG " +
+                    " JOIN CHITIETHOADON ON HANG.MAHANG = CHITIETHOADON.MAHANG " +
+                    " JOIN CHITIETPHIEUNHAP ON HANG.MAHANG = CHITIETPHIEUNHAP.MAHANG " +
+                    " JOIN HOADON ON CHITIETHOADON.MAHD = HOADON.MAHD " +
+                    " LEFT JOIN DoanhThuSanPham DTSP ON HANG.MAHANG = DTSP.MAHANG " +
+                    " WHERE YEAR(HOADON.NGAYLAP) = '{0}'  " +
+                    " GROUP BY HANG.MAHANG, HANG.TENHANG, HANG.DONGIA " +
+                    " UNION ALL " +
+                    " SELECT 'Tong Doanh Thu' AS MAHANG,  " +
+                    "     NULL AS TENHANG, " +
+                    "     NULL AS TONG_SOLUONG,  " +
+                    "     NULL AS DONGIA, " +
+                    "     NULL AS TONG_TIEN_THU_DUOC, " +
+                    "     NULL AS TONG_TIEN_NHAP, " +
+                    "     SUM(DOANH_THU_SAN_PHAM) AS DOANH_THU_TUNG_SAN_PHAM " +
+                    " FROM DoanhThuSanPham; ", nmrNam.Value);
                 DataSet ds = con.LayDuLieu(query);
-                dgvThongKe.DataSource = ds.Tables[0];
+                if (ds != null && ds.Tables[0].Rows.Count > 0)
+                {
+                    dgvThongKe.DataSource = ds.Tables[0];
+                }
+                else
+                {
+                    MessageBox.Show("Không có dữ liệu");
+                }
             }
-            catch(Exception)
+            catch(Exception e)
             {
-                MessageBox.Show("Đang Có Lỗi Xảy Ra" );
+                MessageBox.Show("Đang Có Lỗi Xảy Ra" + e.ToString());
             }
            
         }
