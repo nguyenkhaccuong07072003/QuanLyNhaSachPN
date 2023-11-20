@@ -99,9 +99,9 @@ namespace QuanLyNhaSachPN
                     MessageBox.Show("Không có dữ liệu");
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                MessageBox.Show("Đang Có Lỗi Xảy Ra" +e.ToString());
+                MessageBox.Show("Đang Có Lỗi Xảy Ra" );
             }
 
         }
@@ -150,9 +150,9 @@ namespace QuanLyNhaSachPN
                     MessageBox.Show("Không có dữ liệu");
                 }
             }
-            catch(Exception e)
+            catch(Exception)
             {
-                MessageBox.Show("Đang Có Lỗi Xảy Ra" + e.ToString());
+                MessageBox.Show("Đang Có Lỗi Xảy Ra" );
             }
            
         }
