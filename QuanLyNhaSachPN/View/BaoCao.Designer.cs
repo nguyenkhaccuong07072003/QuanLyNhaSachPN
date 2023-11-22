@@ -81,7 +81,7 @@ namespace QuanLyNhaSachPN
             this.btnLamMoi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLamMoi.FlatAppearance.BorderSize = 0;
             this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLamMoi.Location = new System.Drawing.Point(856, 29);
+            this.btnLamMoi.Location = new System.Drawing.Point(910, 27);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(58, 53);
             this.btnLamMoi.TabIndex = 3;
@@ -94,7 +94,7 @@ namespace QuanLyNhaSachPN
             this.btnTao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnTao.FlatAppearance.BorderSize = 0;
             this.btnTao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTao.Location = new System.Drawing.Point(728, 27);
+            this.btnTao.Location = new System.Drawing.Point(754, 27);
             this.btnTao.Name = "btnTao";
             this.btnTao.Size = new System.Drawing.Size(56, 53);
             this.btnTao.TabIndex = 2;
