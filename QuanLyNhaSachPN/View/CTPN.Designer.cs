@@ -85,7 +85,7 @@ namespace QuanLyNhaSachPN.View
             0,
             0});
             this.nbrSoLuong.Name = "nbrSoLuong";
-            this.nbrSoLuong.Size = new System.Drawing.Size(209, 26);
+            this.nbrSoLuong.Size = new System.Drawing.Size(209, 30);
             this.nbrSoLuong.TabIndex = 2;
             // 
             // cbMaHang
@@ -93,7 +93,7 @@ namespace QuanLyNhaSachPN.View
             this.cbMaHang.FormattingEnabled = true;
             this.cbMaHang.Location = new System.Drawing.Point(193, 108);
             this.cbMaHang.Name = "cbMaHang";
-            this.cbMaHang.Size = new System.Drawing.Size(178, 27);
+            this.cbMaHang.Size = new System.Drawing.Size(178, 31);
             this.cbMaHang.TabIndex = 1;
             // 
             // label7
@@ -102,7 +102,7 @@ namespace QuanLyNhaSachPN.View
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(292, 19);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(202, 25);
+            this.label7.Size = new System.Drawing.Size(255, 32);
             this.label7.TabIndex = 10;
             this.label7.Text = "CHI TIẾT PHIẾU NHẬP";
             // 
@@ -110,7 +110,7 @@ namespace QuanLyNhaSachPN.View
             // 
             this.txtGiaNhap.Location = new System.Drawing.Point(524, 109);
             this.txtGiaNhap.Name = "txtGiaNhap";
-            this.txtGiaNhap.Size = new System.Drawing.Size(203, 26);
+            this.txtGiaNhap.Size = new System.Drawing.Size(203, 30);
             this.txtGiaNhap.TabIndex = 3;
             // 
             // label5
@@ -118,7 +118,7 @@ namespace QuanLyNhaSachPN.View
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(414, 109);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 19);
+            this.label5.Size = new System.Drawing.Size(79, 23);
             this.label5.TabIndex = 4;
             this.label5.Text = "Giá nhập";
             // 
@@ -126,7 +126,7 @@ namespace QuanLyNhaSachPN.View
             // 
             this.txtMaPN.Location = new System.Drawing.Point(193, 57);
             this.txtMaPN.Name = "txtMaPN";
-            this.txtMaPN.Size = new System.Drawing.Size(178, 26);
+            this.txtMaPN.Size = new System.Drawing.Size(178, 30);
             this.txtMaPN.TabIndex = 0;
             // 
             // label3
@@ -134,7 +134,7 @@ namespace QuanLyNhaSachPN.View
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(414, 57);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 19);
+            this.label3.Size = new System.Drawing.Size(78, 23);
             this.label3.TabIndex = 2;
             this.label3.Text = "Số lượng";
             // 
@@ -143,7 +143,7 @@ namespace QuanLyNhaSachPN.View
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(48, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 19);
+            this.label2.Size = new System.Drawing.Size(78, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mã hàng";
             // 
@@ -152,7 +152,7 @@ namespace QuanLyNhaSachPN.View
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(48, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 19);
+            this.label1.Size = new System.Drawing.Size(126, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã phiếu nhập";
             // 
@@ -161,7 +161,7 @@ namespace QuanLyNhaSachPN.View
             this.txtTim.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTim.Location = new System.Drawing.Point(104, 46);
             this.txtTim.Name = "txtTim";
-            this.txtTim.Size = new System.Drawing.Size(249, 26);
+            this.txtTim.Size = new System.Drawing.Size(249, 30);
             this.txtTim.TabIndex = 9;
             this.txtTim.TextChanged += new System.EventHandler(this.txtTim_TextChanged);
             // 
@@ -171,7 +171,7 @@ namespace QuanLyNhaSachPN.View
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(12, 49);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 19);
+            this.label4.Size = new System.Drawing.Size(79, 23);
             this.label4.TabIndex = 26;
             this.label4.Text = "Tìm kiếm";
             // 
@@ -189,11 +189,11 @@ namespace QuanLyNhaSachPN.View
             // 
             this.dgvCTPN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCTPN.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCTPN.Location = new System.Drawing.Point(3, 22);
+            this.dgvCTPN.Location = new System.Drawing.Point(3, 26);
             this.dgvCTPN.Name = "dgvCTPN";
             this.dgvCTPN.RowHeadersWidth = 51;
             this.dgvCTPN.RowTemplate.Height = 24;
-            this.dgvCTPN.Size = new System.Drawing.Size(741, 184);
+            this.dgvCTPN.Size = new System.Drawing.Size(741, 180);
             this.dgvCTPN.TabIndex = 0;
             this.dgvCTPN.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTPN_CellClick);
             // 
@@ -285,7 +285,7 @@ namespace QuanLyNhaSachPN.View
             // 
             // CTPN
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(747, 503);
             this.Controls.Add(this.groupBox2);
@@ -293,6 +293,7 @@ namespace QuanLyNhaSachPN.View
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
             this.Name = "CTPN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CTPN";

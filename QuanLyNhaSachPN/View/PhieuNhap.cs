@@ -66,67 +66,88 @@ namespace QuanLyNhaSachPN.View
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string checkMAPN = string.Format("select * from PHIEUNHAP where MAPHIEUNHAP = N'{0}'"
-             , txtMaPN.Text);
-            DataSet ds = con.LayDuLieu(checkMAPN);
-            if (ds.Tables[0].Rows.Count == 0)
+            try
             {
-                string query = string.Format("insert into PHIEUNHAP values(N'{0}',N'{1}',N'{2}',N'{3}',N'{4}')"
-                , txtMaPN.Text, cbMaNCC.SelectedValue, cbMaNV.SelectedValue ,dtpNgayNhap.Value.ToString("yyyy/MM/dd"),txtTongTien.Text);
-                bool result = con.ThucThi(query);
-                if (result)
+                string checkMAPN = string.Format("select * from PHIEUNHAP where MAPHIEUNHAP = N'{0}'"
+                 , txtMaPN.Text);
+                DataSet ds = con.LayDuLieu(checkMAPN);
+                if (ds.Tables[0].Rows.Count == 0)
                 {
-                    MessageBox.Show("Thêm thành công");
-                    btnReset.PerformClick();
+                    string query = string.Format("insert into PHIEUNHAP values(N'{0}',N'{1}',N'{2}',N'{3}',N'{4}')"
+                    , txtMaPN.Text, cbMaNCC.SelectedValue, cbMaNV.SelectedValue, dtpNgayNhap.Value.ToString("yyyy/MM/dd"), txtTongTien.Text);
+                    bool result = con.ThucThi(query);
+                    if (result)
+                    {
+                        MessageBox.Show("Thêm thành công");
+                        btnReset.PerformClick();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm thất bại");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Thêm thất bại");
+                    MessageBox.Show("Mã phiếu nhập đã tồn tại!");
                 }
             }
-            else
+            catch(Exception)
             {
-                MessageBox.Show("Mã phiếu nhập đã tồn tại!");
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            string query = string.Format("update PHIEUNHAP set MANCC = N'{1}', MANV = N'{2}' ,NGAYXUAT =N'{3}',TONGTIEN = N'{4}' where MAPHIEUNHAP = N'{0}'",
-                txtMaPN.Text,
-                cbMaNCC.SelectedValue,
-                cbMaNV.SelectedValue,
-                dtpNgayNhap.Value.ToString("yyyy/MM/dd"),
-                txtTongTien.Text
-                );
-            bool kt = con.ThucThi(query);
-            if (kt)
+            try
             {
-                MessageBox.Show("Sửa thành công");
-                btnReset.PerformClick();
+                string query = string.Format("update PHIEUNHAP set MANCC = N'{1}', MANV = N'{2}' ,NGAYXUAT =N'{3}',TONGTIEN = N'{4}' where MAPHIEUNHAP = N'{0}'",
+                    txtMaPN.Text,
+                    cbMaNCC.SelectedValue,
+                    cbMaNV.SelectedValue,
+                    dtpNgayNhap.Value.ToString("yyyy/MM/dd"),
+                    txtTongTien.Text
+                    );
+                bool kt = con.ThucThi(query);
+                if (kt)
+                {
+                    MessageBox.Show("Sửa thành công");
+                    btnReset.PerformClick();
+                }
+                else
+                {
+                    MessageBox.Show("Sửa thất bại");
+                }
             }
-            else
+            catch(Exception)
             {
-                MessageBox.Show("Sửa thất bại");
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            string query = string.Format("Delete PHIEUNHAP where MAPHIEUNHAP = N'{0}'", txtMaPN.Text);
-            DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa?", "Xác nhận xóa", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            try
             {
-                bool kt = con.ThucThi(query);
-                if (kt)
+                string query = string.Format("Delete PHIEUNHAP where MAPHIEUNHAP = N'{0}'", txtMaPN.Text);
+                DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa?", "Xác nhận xóa", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Xóa thành công");
-                    btnReset.PerformClick();
+                    bool kt = con.ThucThi(query);
+                    if (kt)
+                    {
+                        MessageBox.Show("Xóa thành công");
+                        btnReset.PerformClick();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Xóa thất bại");
-                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
@@ -156,40 +177,54 @@ namespace QuanLyNhaSachPN.View
                 }
                 else
                 {
-                    MessageBox.Show("No data found.");
+                    MessageBox.Show("Không tìm thấy dữ liệu");
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("An error occurred: " + ex.Message);
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
         private void dgvPhieuNhap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int r = e.RowIndex;
-            if (r >= 0)
+            try
             {
-                txtMaPN.Enabled = false;
-                btnThem.Enabled = false;
-                btnXoa.Enabled = true;
-                btnSua.Enabled = true;
+                int r = e.RowIndex;
+                if (r >= 0)
+                {
+                    txtMaPN.Enabled = false;
+                    btnThem.Enabled = false;
+                    btnXoa.Enabled = true;
+                    btnSua.Enabled = true;
 
-                txtMaPN.Text = dgvPhieuNhap.Rows[r].Cells["MAPHIEUNHAP"].Value.ToString();
-                cbMaNCC.SelectedValue = dgvPhieuNhap.Rows[r].Cells["MANCC"].Value.ToString();
-                cbMaNV.SelectedValue = dgvPhieuNhap.Rows[r].Cells["MANV"].Value.ToString();
-                dtpNgayNhap.Text = dgvPhieuNhap.Rows[r].Cells["NGAYNHAP"].Value.ToString();
-                txtTongTien.Text = dgvPhieuNhap.Rows[r].Cells["TONGTIEN"].Value.ToString();
+                    txtMaPN.Text = dgvPhieuNhap.Rows[r].Cells["MAPHIEUNHAP"].Value.ToString();
+                    cbMaNCC.SelectedValue = dgvPhieuNhap.Rows[r].Cells["MANCC"].Value.ToString();
+                    cbMaNV.SelectedValue = dgvPhieuNhap.Rows[r].Cells["MANV"].Value.ToString();
+                    dtpNgayNhap.Text = dgvPhieuNhap.Rows[r].Cells["NGAYNHAP"].Value.ToString();
+                    txtTongTien.Text = dgvPhieuNhap.Rows[r].Cells["TONGTIEN"].Value.ToString();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
         private void dgvPhieuNhap_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            int r = e.RowIndex;
-            if (r >= 0)
+            try
             {
-                CTPN frm = new CTPN(dgvPhieuNhap.Rows[r].Cells["MAPHIEUNHAP"].Value.ToString());
-                frm.Show();
+                int r = e.RowIndex;
+                if (r >= 0)
+                {
+                    CTPN frm = new CTPN(dgvPhieuNhap.Rows[r].Cells["MAPHIEUNHAP"].Value.ToString());
+                    frm.Show();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 

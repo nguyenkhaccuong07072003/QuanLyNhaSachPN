@@ -56,10 +56,6 @@ namespace QuanLyNhaSachPN
             childForm.BringToFront();
             childForm.Show();
         }
-        private void btnTrangChu_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnQLNV_Click(object sender, EventArgs e)
         {
@@ -93,14 +89,5 @@ namespace QuanLyNhaSachPN
             this.Close();
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void panelChildForm_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

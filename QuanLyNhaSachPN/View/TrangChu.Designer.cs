@@ -31,7 +31,6 @@ namespace QuanLyNhaSachPN
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnThoat = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.btnQLNCC = new System.Windows.Forms.Button();
@@ -45,7 +44,6 @@ namespace QuanLyNhaSachPN
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btnThoat);
             this.panel1.Controls.Add(this.btnDangXuat);
             this.panel1.Controls.Add(this.btnThongKe);
             this.panel1.Controls.Add(this.btnQLNCC);
@@ -57,7 +55,7 @@ namespace QuanLyNhaSachPN
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(283, 750);
+            this.panel1.Size = new System.Drawing.Size(283, 753);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -71,27 +69,14 @@ namespace QuanLyNhaSachPN
             this.label1.Text = "TRANG CHỦ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnThoat
-            // 
-            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThoat.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(168, 581);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(100, 60);
-            this.btnThoat.TabIndex = 7;
-            this.btnThoat.Text = "THOÁT";
-            this.btnThoat.UseVisualStyleBackColor = true;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
             // btnDangXuat
             // 
             this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangXuat.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangXuat.Location = new System.Drawing.Point(12, 581);
+            this.btnDangXuat.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.Location = new System.Drawing.Point(0, 664);
             this.btnDangXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(100, 60);
+            this.btnDangXuat.Size = new System.Drawing.Size(283, 89);
             this.btnDangXuat.TabIndex = 6;
             this.btnDangXuat.Text = "ĐĂNG XUẤT";
             this.btnDangXuat.UseVisualStyleBackColor = true;
@@ -101,10 +86,10 @@ namespace QuanLyNhaSachPN
             // 
             this.btnThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThongKe.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKe.Location = new System.Drawing.Point(0, 475);
+            this.btnThongKe.Location = new System.Drawing.Point(0, 549);
             this.btnThongKe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(283, 100);
+            this.btnThongKe.Size = new System.Drawing.Size(283, 115);
             this.btnThongKe.TabIndex = 5;
             this.btnThongKe.Text = "THỐNG KÊ";
             this.btnThongKe.UseVisualStyleBackColor = true;
@@ -114,10 +99,10 @@ namespace QuanLyNhaSachPN
             // 
             this.btnQLNCC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLNCC.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLNCC.Location = new System.Drawing.Point(0, 382);
+            this.btnQLNCC.Location = new System.Drawing.Point(0, 434);
             this.btnQLNCC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQLNCC.Name = "btnQLNCC";
-            this.btnQLNCC.Size = new System.Drawing.Size(283, 100);
+            this.btnQLNCC.Size = new System.Drawing.Size(283, 115);
             this.btnQLNCC.TabIndex = 4;
             this.btnQLNCC.Text = "QUẢN LÝ NHÀ CUNG CẤP";
             this.btnQLNCC.UseVisualStyleBackColor = true;
@@ -127,10 +112,10 @@ namespace QuanLyNhaSachPN
             // 
             this.btnQLK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLK.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLK.Location = new System.Drawing.Point(0, 286);
+            this.btnQLK.Location = new System.Drawing.Point(0, 319);
             this.btnQLK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQLK.Name = "btnQLK";
-            this.btnQLK.Size = new System.Drawing.Size(283, 100);
+            this.btnQLK.Size = new System.Drawing.Size(283, 115);
             this.btnQLK.TabIndex = 3;
             this.btnQLK.Text = "QUẢN LÝ KHO";
             this.btnQLK.UseVisualStyleBackColor = true;
@@ -140,10 +125,10 @@ namespace QuanLyNhaSachPN
             // 
             this.btnQLBH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLBH.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLBH.Location = new System.Drawing.Point(0, 191);
+            this.btnQLBH.Location = new System.Drawing.Point(0, 204);
             this.btnQLBH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQLBH.Name = "btnQLBH";
-            this.btnQLBH.Size = new System.Drawing.Size(283, 100);
+            this.btnQLBH.Size = new System.Drawing.Size(283, 115);
             this.btnQLBH.TabIndex = 2;
             this.btnQLBH.Text = "QUẢN LÝ BÁN HÀNG";
             this.btnQLBH.UseVisualStyleBackColor = true;
@@ -151,36 +136,38 @@ namespace QuanLyNhaSachPN
             // 
             // btnQLNV
             // 
+            this.btnQLNV.BackColor = System.Drawing.SystemColors.Control;
             this.btnQLNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLNV.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLNV.Location = new System.Drawing.Point(0, 96);
+            this.btnQLNV.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnQLNV.Location = new System.Drawing.Point(0, 89);
             this.btnQLNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQLNV.Name = "btnQLNV";
-            this.btnQLNV.Size = new System.Drawing.Size(283, 100);
+            this.btnQLNV.Size = new System.Drawing.Size(283, 115);
             this.btnQLNV.TabIndex = 1;
             this.btnQLNV.Text = "QUẢN LÝ NHÂN VIÊN";
-            this.btnQLNV.UseVisualStyleBackColor = true;
+            this.btnQLNV.UseVisualStyleBackColor = false;
             this.btnQLNV.Click += new System.EventHandler(this.btnQLNV_Click);
             // 
             // panelChildForm
             // 
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(283, 0);
-            this.panelChildForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelChildForm.Margin = new System.Windows.Forms.Padding(4);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1088, 750);
+            this.panelChildForm.Size = new System.Drawing.Size(1099, 753);
             this.panelChildForm.TabIndex = 1;
-            this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
             // 
             // TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1371, 750);
+            this.ClientSize = new System.Drawing.Size(1382, 753);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(1363, 724);
+            this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1363, 722);
             this.Name = "TrangChu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TrangChu";
@@ -195,15 +182,14 @@ namespace QuanLyNhaSachPN
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnDangXuat;
         private System.Windows.Forms.Button btnThongKe;
         private System.Windows.Forms.Button btnQLNCC;
         private System.Windows.Forms.Button btnQLK;
         private System.Windows.Forms.Button btnQLBH;
-        private System.Windows.Forms.Button btnQLNV;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelChildForm;
+        private System.Windows.Forms.Button btnQLNV;
     }
 }
 

@@ -27,49 +27,54 @@ namespace QuanLyNhaSachPN
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-            string chucDanh;
-            if(rbtnNhanVien.Checked)
+            try
             {
-                chucDanh = rbtnNhanVien.Text;
-            }
-            else 
-            {
-                chucDanh = rbtnQuanLy.Text;
-            }
-            
-            string checkTK = string.Format("select * from NguoiDung where taikhoan = '{0}'"
-                , txtTaiKhoan.Text);
-            DataSet ds = con.LayDuLieu(checkTK);
-            if (ds.Tables[0].Rows.Count == 0)
-            {
-                if (txtMatKhau.Text == txtNhapLaiMatKhau.Text)
+                string chucDanh;
+                if (rbtnNhanVien.Checked)
                 {
-                    string query = string.Format("insert into NguoiDung values('{0}','{1}','{2}')"
-                    , txtTaiKhoan.Text, txtMatKhau.Text, chucDanh);
-                    bool result = con.ThucThi(query);
-                    if (result)
+                    chucDanh = rbtnNhanVien.Text;
+                }
+                else
+                {
+                    chucDanh = rbtnQuanLy.Text;
+                }
+
+                string checkTK = string.Format("select * from NguoiDung where taikhoan = '{0}'"
+                    , txtTaiKhoan.Text);
+                DataSet ds = con.LayDuLieu(checkTK);
+                if (ds.Tables[0].Rows.Count == 0)
+                {
+                    if (txtMatKhau.Text == txtNhapLaiMatKhau.Text)
                     {
-                        MessageBox.Show("Đăng kí thành công");
-                        txtTaiKhoan.Text = "";
-                        txtMatKhau.Text = "";
-                        txtNhapLaiMatKhau.Text = "";
+                        string query = string.Format("insert into NguoiDung values('{0}','{1}','{2}')"
+                        , txtTaiKhoan.Text, txtMatKhau.Text, chucDanh);
+                        bool result = con.ThucThi(query);
+                        if (result)
+                        {
+                            MessageBox.Show("Đăng kí thành công");
+                            txtTaiKhoan.Text = "";
+                            txtMatKhau.Text = "";
+                            txtNhapLaiMatKhau.Text = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show("Đăng kí thất bại");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Đăng kí thất bại");
+                        MessageBox.Show("Nhập lại mật khẩu không đúng");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Nhập lại mật khẩu không đúng");
+                    MessageBox.Show("Tài khoản đã tồn tại!");
                 }
             }
-            else
+            catch(Exception)
             {
-                MessageBox.Show("Tài khoản đã tồn tại!");
-            }    
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
+            }
         }
-
-
     }
 }

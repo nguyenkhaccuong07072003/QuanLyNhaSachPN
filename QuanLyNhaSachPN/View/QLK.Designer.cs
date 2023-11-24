@@ -44,13 +44,13 @@ namespace QuanLyNhaSachPN.View
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1082, 64);
+            this.panel1.Size = new System.Drawing.Size(1081, 64);
             this.panel1.TabIndex = 0;
             // 
             // btnHangHoa
             // 
             this.btnHangHoa.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHangHoa.Location = new System.Drawing.Point(303, 14);
+            this.btnHangHoa.Location = new System.Drawing.Point(305, 10);
             this.btnHangHoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHangHoa.Name = "btnHangHoa";
             this.btnHangHoa.Size = new System.Drawing.Size(230, 46);
@@ -76,14 +76,14 @@ namespace QuanLyNhaSachPN.View
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(0, 64);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1082, 509);
+            this.panelChildForm.Size = new System.Drawing.Size(1081, 642);
             this.panelChildForm.TabIndex = 1;
             // 
             // QLK
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1082, 573);
+            this.ClientSize = new System.Drawing.Size(1081, 706);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

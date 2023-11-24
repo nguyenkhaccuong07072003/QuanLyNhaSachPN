@@ -75,20 +75,20 @@ namespace QuanLyNhaSachPN.View
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(814, 145);
+            this.groupBox1.Size = new System.Drawing.Size(1063, 145);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // nbrSoLuong
             // 
-            this.nbrSoLuong.Location = new System.Drawing.Point(352, 63);
+            this.nbrSoLuong.Location = new System.Drawing.Point(366, 64);
             this.nbrSoLuong.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
             this.nbrSoLuong.Name = "nbrSoLuong";
-            this.nbrSoLuong.Size = new System.Drawing.Size(148, 26);
+            this.nbrSoLuong.Size = new System.Drawing.Size(161, 30);
             this.nbrSoLuong.TabIndex = 2;
             // 
             // label2
@@ -97,15 +97,15 @@ namespace QuanLyNhaSachPN.View
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(347, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 25);
+            this.label2.Size = new System.Drawing.Size(143, 32);
             this.label2.TabIndex = 22;
             this.label2.Text = "HÀNG HÓA";
             // 
             // txtDongia
             // 
-            this.txtDongia.Location = new System.Drawing.Point(634, 61);
+            this.txtDongia.Location = new System.Drawing.Point(643, 63);
             this.txtDongia.Name = "txtDongia";
-            this.txtDongia.Size = new System.Drawing.Size(127, 26);
+            this.txtDongia.Size = new System.Drawing.Size(162, 30);
             this.txtDongia.TabIndex = 4;
             // 
             // label3
@@ -113,16 +113,16 @@ namespace QuanLyNhaSachPN.View
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 66);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 19);
+            this.label3.Size = new System.Drawing.Size(78, 23);
             this.label3.TabIndex = 13;
             this.label3.Text = "Mã hàng";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(523, 68);
+            this.label7.Location = new System.Drawing.Point(567, 70);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 19);
+            this.label7.Size = new System.Drawing.Size(70, 23);
             this.label7.TabIndex = 21;
             this.label7.Text = "Đơn giá";
             // 
@@ -130,14 +130,14 @@ namespace QuanLyNhaSachPN.View
             // 
             this.txtMahang.Location = new System.Drawing.Point(92, 61);
             this.txtMahang.Name = "txtMahang";
-            this.txtMahang.Size = new System.Drawing.Size(163, 26);
+            this.txtMahang.Size = new System.Drawing.Size(163, 30);
             this.txtMahang.TabIndex = 0;
             // 
             // txtDVT
             // 
-            this.txtDVT.Location = new System.Drawing.Point(351, 107);
+            this.txtDVT.Location = new System.Drawing.Point(365, 108);
             this.txtDVT.Name = "txtDVT";
-            this.txtDVT.Size = new System.Drawing.Size(149, 26);
+            this.txtDVT.Size = new System.Drawing.Size(162, 30);
             this.txtDVT.TabIndex = 3;
             // 
             // label4
@@ -145,7 +145,7 @@ namespace QuanLyNhaSachPN.View
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(12, 110);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 19);
+            this.label4.Size = new System.Drawing.Size(80, 23);
             this.label4.TabIndex = 15;
             this.label4.Text = "Tên hàng";
             // 
@@ -154,7 +154,7 @@ namespace QuanLyNhaSachPN.View
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(265, 117);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 19);
+            this.label6.Size = new System.Drawing.Size(94, 23);
             this.label6.TabIndex = 19;
             this.label6.Text = "Đơn vị tính";
             // 
@@ -162,7 +162,7 @@ namespace QuanLyNhaSachPN.View
             // 
             this.txtTenhang.Location = new System.Drawing.Point(92, 105);
             this.txtTenhang.Name = "txtTenhang";
-            this.txtTenhang.Size = new System.Drawing.Size(163, 26);
+            this.txtTenhang.Size = new System.Drawing.Size(163, 30);
             this.txtTenhang.TabIndex = 1;
             // 
             // label5
@@ -170,7 +170,7 @@ namespace QuanLyNhaSachPN.View
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(268, 66);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 19);
+            this.label5.Size = new System.Drawing.Size(78, 23);
             this.label5.TabIndex = 17;
             this.label5.Text = "Số lượng";
             // 
@@ -193,7 +193,7 @@ namespace QuanLyNhaSachPN.View
             this.txtTim.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTim.Location = new System.Drawing.Point(107, 56);
             this.txtTim.Name = "txtTim";
-            this.txtTim.Size = new System.Drawing.Size(262, 26);
+            this.txtTim.Size = new System.Drawing.Size(262, 30);
             this.txtTim.TabIndex = 10;
             this.txtTim.TextChanged += new System.EventHandler(this.txtTim_TextChanged);
             // 
@@ -203,7 +203,7 @@ namespace QuanLyNhaSachPN.View
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(18, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 19);
+            this.label1.Size = new System.Drawing.Size(79, 23);
             this.label1.TabIndex = 12;
             this.label1.Text = "Tìm kiếm";
             // 
@@ -267,9 +267,9 @@ namespace QuanLyNhaSachPN.View
             // 
             this.groupBox3.Controls.Add(this.dgvQLhang);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox3.Location = new System.Drawing.Point(0, 267);
+            this.groupBox3.Location = new System.Drawing.Point(0, 318);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(814, 277);
+            this.groupBox3.Size = new System.Drawing.Size(1063, 277);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             // 
@@ -277,11 +277,11 @@ namespace QuanLyNhaSachPN.View
             // 
             this.dgvQLhang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQLhang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvQLhang.Location = new System.Drawing.Point(3, 22);
+            this.dgvQLhang.Location = new System.Drawing.Point(3, 26);
             this.dgvQLhang.Name = "dgvQLhang";
             this.dgvQLhang.RowHeadersWidth = 51;
             this.dgvQLhang.RowTemplate.Height = 24;
-            this.dgvQLhang.Size = new System.Drawing.Size(808, 252);
+            this.dgvQLhang.Size = new System.Drawing.Size(1057, 248);
             this.dgvQLhang.TabIndex = 0;
             this.dgvQLhang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQLhang_CellClick);
             // 
@@ -297,15 +297,15 @@ namespace QuanLyNhaSachPN.View
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 145);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(814, 122);
+            this.groupBox2.Size = new System.Drawing.Size(1063, 173);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
             // QLHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 544);
+            this.ClientSize = new System.Drawing.Size(1063, 595);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);

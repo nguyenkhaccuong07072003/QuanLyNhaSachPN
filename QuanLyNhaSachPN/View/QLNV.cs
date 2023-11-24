@@ -45,21 +45,23 @@ namespace QuanLyNhaSachPN
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if(rdbtnNam.Checked)
+            try
             {
-                gioitinh = rdbtnNam.Text;
-            }
-            else
-            {
-                gioitinh = rdbtnNu.Text;
-            }
-            string checkMANV = string.Format("select * from NHANVIEN where MANV = N'{0}'"
-                , txtManv.Text);
-            DataSet ds = kn.LayDuLieu(checkMANV);
-            if (ds.Tables[0].Rows.Count == 0)
-            {
+                if (rdbtnNam.Checked)
+                {
+                    gioitinh = rdbtnNam.Text;
+                }
+                else
+                {
+                    gioitinh = rdbtnNu.Text;
+                }
+                string checkMANV = string.Format("select * from NHANVIEN where MANV = N'{0}'"
+                    , txtManv.Text);
+                DataSet ds = kn.LayDuLieu(checkMANV);
+                if (ds.Tables[0].Rows.Count == 0)
+                {
                     string query = string.Format("insert into NHANVIEN values(N'{0}',N'{1}',N'{2}',N'{3}',N'{4}',N'{5}')"
-                    , txtManv.Text, txtTennv.Text, dtpNgSinh.Value.ToString("yyyy/MM/dd"),gioitinh,txtDiachi.Text,txtSDT.Text);
+                    , txtManv.Text, txtTennv.Text, dtpNgSinh.Value.ToString("yyyy/MM/dd"), gioitinh, txtDiachi.Text, txtSDT.Text);
                     bool result = kn.ThucThi(query);
                     if (result)
                     {
@@ -70,59 +72,78 @@ namespace QuanLyNhaSachPN
                     {
                         MessageBox.Show("Thêm thất bại");
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Mã nhân viên đã tồn tại!");
+                }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("Mã nhân viên đã tồn tại!");
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if (rdbtnNam.Checked)
+            try
             {
-                gioitinh = rdbtnNam.Text;
+                if (rdbtnNam.Checked)
+                {
+                    gioitinh = rdbtnNam.Text;
+                }
+                else
+                {
+                    gioitinh = rdbtnNu.Text;
+                }
+                string query = string.Format("update NHANVIEN set TENNV=N'{1}', NGAYSINH=N'{2}', GIOITINH=N'{3}', DIACHI=N'{4}', SDT=N'{5}' where MANV=N'{0}'",
+                    txtManv.Text,
+                    txtTennv.Text,
+                    dtpNgSinh.Value.ToString("yyyy/MM/dd"),
+                    gioitinh,
+                    txtDiachi.Text,
+                    txtSDT.Text
+                    );
+                bool kt = kn.ThucThi(query);
+                if (kt)
+                {
+                    MessageBox.Show("Sửa thành công");
+                    btnReset.PerformClick();
+                }
+                else
+                {
+                    MessageBox.Show("Sửa thất bại");
+                }
             }
-            else
+            catch (Exception)
             {
-                gioitinh = rdbtnNu.Text;
-            }
-            string query = string.Format("update NHANVIEN set TENNV=N'{1}', NGAYSINH=N'{2}', GIOITINH=N'{3}', DIACHI=N'{4}', SDT=N'{5}' where MANV=N'{0}'",
-                txtManv.Text,
-                txtTennv.Text,
-                dtpNgSinh.Value.ToString("yyyy/MM/dd"),
-                gioitinh,
-                txtDiachi.Text,
-                txtSDT.Text
-                );
-            bool kt = kn.ThucThi(query);
-            if (kt)
-            {
-                MessageBox.Show("Sửa thành công");
-                btnReset.PerformClick();
-            }
-            else
-            {
-                MessageBox.Show("Sửa thất bại");
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            string query = string.Format("DELETE FROM NHANVIEN WHERE MANV=N'{0}'", txtManv.Text);
-            DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa?", "Xác nhận xóa", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            try
             {
-                bool kt = kn.ThucThi(query);
-                if (kt)
+                string query = string.Format("DELETE FROM NHANVIEN WHERE MANV=N'{0}'", txtManv.Text);
+                DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa?", "Xác nhận xóa", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Xóa thành công");
-                    btnReset.PerformClick();
+                    bool kt = kn.ThucThi(query);
+                    if (kt)
+                    {
+                        MessageBox.Show("Xóa thành công");
+                        btnReset.PerformClick();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Xóa thất bại");
-                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
@@ -153,31 +174,38 @@ namespace QuanLyNhaSachPN
                 }
                 else
                 {
-                    MessageBox.Show("No data found.");
+                    MessageBox.Show("Không tìm thấy dữ liệu");
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show("An error occurred: " + ex.Message);
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
         private void dgvNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int r = e.RowIndex;
-            if (r >= 0)
+            try
             {
-                txtManv.Enabled = false;
-                btnThem.Enabled = false;
-                btnXoa.Enabled = true;
-                btnSua.Enabled = true;
+                int r = e.RowIndex;
+                if (r >= 0)
+                {
+                    txtManv.Enabled = false;
+                    btnThem.Enabled = false;
+                    btnXoa.Enabled = true;
+                    btnSua.Enabled = true;
 
-                txtManv.Text = dgvNhanVien.Rows[r].Cells["MANV"].Value.ToString();
-                txtTennv.Text = dgvNhanVien.Rows[r].Cells["TENNV"].Value.ToString();
-                dtpNgSinh.Text = dgvNhanVien.Rows[r].Cells["NGAYSINH"].Value.ToString();
-                txtDiachi.Text = dgvNhanVien.Rows[r].Cells["DIACHI"].Value.ToString();
-                txtSDT.Text = dgvNhanVien.Rows[r].Cells["SDT"].Value.ToString();
-                gioitinh = dgvNhanVien.Rows[r].Cells["GIOITINH"].Value.ToString();
+                    txtManv.Text = dgvNhanVien.Rows[r].Cells["MANV"].Value.ToString();
+                    txtTennv.Text = dgvNhanVien.Rows[r].Cells["TENNV"].Value.ToString();
+                    dtpNgSinh.Text = dgvNhanVien.Rows[r].Cells["NGAYSINH"].Value.ToString();
+                    txtDiachi.Text = dgvNhanVien.Rows[r].Cells["DIACHI"].Value.ToString();
+                    txtSDT.Text = dgvNhanVien.Rows[r].Cells["SDT"].Value.ToString();
+                    gioitinh = dgvNhanVien.Rows[r].Cells["GIOITINH"].Value.ToString();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Đang Có Lỗi Xảy Ra");
             }
         }
 
